@@ -1,0 +1,82 @@
+[
+  {
+    "ContainingType": "AuthService.Controllers.PatientAuthController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/PatientAuth/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientForgotPassword",
+        "Type": "AuthService.Application.Commands.Patient_authCmd.PatientForgotPasswordCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthService.Controllers.PatientAuthController",
+    "Method": "RegisterPatient",
+    "RelativePath": "api/PatientAuth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "AuthService.Application.Commands.Patient_authCmd.PatientRegisterCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthService.Controllers.PatientAuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/PatientAuth/reset-password",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientResPass",
+        "Type": "AuthService.Application.Commands.Patient_authCmd.PatientResPassCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthService.Controllers.PatientAuthController",
+    "Method": "VerfyOtp",
+    "RelativePath": "api/PatientAuth/verify-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientEmailVerify",
+        "Type": "AuthService.Application.Commands.Patient_authCmd.PatientEmailVerifyCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthService.Controllers.PatientAuthController",
+    "Method": "VerfyOtpRePass",
+    "RelativePath": "api/PatientAuth/verify-otp-reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientEmailVerfyRePass",
+        "Type": "AuthService.Application.Commands.Patient_authCmd.PatientEmailVerfyRePassCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
