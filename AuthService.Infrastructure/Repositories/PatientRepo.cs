@@ -1,4 +1,4 @@
-﻿using AuthService.Application.Interfaces;
+﻿using AuthService.Application.Interfaces.IRepos;
 using AuthService.Domain.Entities;
 using AuthService.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;

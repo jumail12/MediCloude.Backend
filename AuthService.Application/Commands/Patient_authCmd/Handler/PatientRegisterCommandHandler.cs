@@ -1,6 +1,6 @@
-﻿
-using AuthService.Application.Commands.Patient_authCmd;
-using AuthService.Application.Interfaces;
+﻿using AuthService.Application.Commands.Patient_authCmd;
+using AuthService.Application.Interfaces.IRepos;
+using AuthService.Application.Interfaces.IServices;
 using AuthService.Domain.Entities;
 using MediatR;
 using System;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuthService.Application.Commands.Handlers.Pateint
+namespace AuthService.Application.Commands.Patient_authCmd.Handler
 {
     public class PatientRegisterCommandHandler : IRequestHandler<PatientRegisterCommand, string>
     {
@@ -37,7 +37,7 @@ namespace AuthService.Application.Commands.Handlers.Pateint
                 Random random = new Random();
                 int otp = random.Next(100000, 1000000);
 
-                await _emailService.SendOtp(request.Email,otp);
+                await _emailService.SendOtp(request.Email, otp);
 
                 string salt = BCrypt.Net.BCrypt.GenerateSalt();
                 string hashPassword = BCrypt.Net.BCrypt.HashPassword(request.Password, salt);

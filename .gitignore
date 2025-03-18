@@ -363,3 +363,13 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Exclude .env files
+.env
+
+bin/
+obj/
+*.user
+.vscode/
+*.suo
+*.vs

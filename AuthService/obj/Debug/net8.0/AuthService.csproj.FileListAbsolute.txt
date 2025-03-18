@@ -150,3 +150,12 @@ D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\Aut
 D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService\bin\Debug\net8.0\AuthService.Application.dll
 D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService\bin\Debug\net8.0\AuthService.Application.pdb
 D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService\obj\Debug\net8.0\AuthService.sourcelink.json

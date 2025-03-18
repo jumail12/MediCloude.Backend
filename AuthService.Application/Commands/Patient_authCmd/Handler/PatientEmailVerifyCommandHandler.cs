@@ -1,13 +1,11 @@
-﻿
-
-using AuthService.Application.Commands.Patient_authCmd;
-using AuthService.Application.Interfaces;
+﻿using AuthService.Application.Commands.Patient_authCmd;
+using AuthService.Application.Interfaces.IRepos;
 using AuthService.Domain.Entities;
 using MediatR;
 using System.ComponentModel.DataAnnotations;
 
 
-namespace AuthService.Application.Commands.Handlers.Pateint_authHandler
+namespace AuthService.Application.Commands.Patient_authCmd.Handler
 {
     public class PatientEmailVerifyCommandHandler : IRequestHandler<PatientEmailVerifyCommand, string>
     {
@@ -22,23 +20,23 @@ namespace AuthService.Application.Commands.Handlers.Pateint_authHandler
             try
             {
                 var verifiedUsers = await _repo.GetAllVeriFyIdentity();
-                var veriUser=verifiedUsers.FirstOrDefault(a=>a.Email==request.email && a.Otp==request.otp);
+                var veriUser = verifiedUsers.FirstOrDefault(a => a.Email == request.email && a.Otp == request.otp);
 
-                if(veriUser==null)
+                if (veriUser == null)
                 {
                     throw new ValidationException("User not found");
                 }
 
-                TimeOnly currentTime= TimeOnly.FromDateTime(DateTime.Now);
-                if(currentTime <=veriUser.Expire_time)
+                TimeOnly currentTime = TimeOnly.FromDateTime(DateTime.Now);
+                if (currentTime <= veriUser.Expire_time)
                 {
                     var patient_ = new Patient
                     {
-                        Patient_name=veriUser.Name,
-                        Email=veriUser.Email,
-                        Password=veriUser.Password,
-                        Created_by=veriUser.Name,
-                        Created_on=DateTime.UtcNow,
+                        Patient_name = veriUser.Name,
+                        Email = veriUser.Email,
+                        Password = veriUser.Password,
+                        Created_by = veriUser.Name,
+                        Created_on = DateTime.UtcNow,
                         Updated_by = veriUser.Name,
                         Updated_on = DateTime.UtcNow
                     };

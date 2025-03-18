@@ -96,7 +96,6 @@ namespace AuthService.Infrastructure.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("Medical_license_number")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Password")
@@ -109,7 +108,7 @@ namespace AuthService.Infrastructure.Migrations
                     b.Property<string>("Profile")
                         .HasColumnType("text");
 
-                    b.Property<Guid>("Specialization_id")
+                    b.Property<Guid?>("Specialization_id")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Updated_by")

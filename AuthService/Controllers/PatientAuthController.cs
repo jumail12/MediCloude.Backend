@@ -1,9 +1,11 @@
 ﻿using AuthService.ApiResponses;
 using AuthService.Application.Commands.Patient_authCmd;
+using AuthService.Application.Common.DTOs.PatientDTOs;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace AuthService.Controllers
 {
@@ -28,6 +30,28 @@ namespace AuthService.Controllers
             catch (ValidationException ex) 
             {
                 return BadRequest(new ApiResponse<string>(400, "Validation failed", null, ex.Message));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ApiResponse<string>(500, "An Internal Error occurred", null, ex.Message));
+            }
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody]PatientLoginCommand patientLogin)
+        {
+            try
+            {
+                var res = await _sender.Send(patientLogin);
+                return Ok(new ApiResponse<PatientLoginResDto>(200, "Success", res, null));
+            }
+            catch (ValidationException ex)
+            {
+                return BadRequest(new ApiResponse<string>(400, "Validation failed", null, ex.Message));
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(new ApiResponse<string>(401, "Validation failed", null, ex.Message));
             }
             catch (Exception ex)
             {

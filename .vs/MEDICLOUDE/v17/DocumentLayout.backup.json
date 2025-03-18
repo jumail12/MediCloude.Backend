@@ -3,52 +3,72 @@
   "WorkspaceRootPath": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\handlers\\pateint_authhandler\\pateintlogincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\handlers\\pateint_authhandler\\pateintlogincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{326B67AE-0D22-497A-866A-1C2AFBB61C0A}|AuthService\\AuthService.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice\\controllers\\doctorauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{326B67AE-0D22-497A-866A-1C2AFBB61C0A}|AuthService\\AuthService.csproj|solutionrelative:authservice\\controllers\\doctorauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C051581-1D47-4069-8598-7CAC017D4ED7}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.infrastructure\\authservice.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{1C051581-1D47-4069-8598-7CAC017D4ED7}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|solutionrelative:authservice.infrastructure\\authservice.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\patient_authcmd\\handler\\pateintlogincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\patient_authcmd\\handler\\pateintlogincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\handlers\\pateint_authhandler\\patientregistercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\handlers\\pateint_authhandler\\patientregistercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\doctor_authcmd\\handler\\drlogincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\doctor_authcmd\\handler\\drlogincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\handlers\\pateint_authhandler\\patientemailverfyrepasscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\handlers\\pateint_authhandler\\patientemailverfyrepasscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C051581-1D47-4069-8598-7CAC017D4ED7}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.infrastructure\\repositories\\drrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C051581-1D47-4069-8598-7CAC017D4ED7}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|solutionrelative:authservice.infrastructure\\repositories\\drrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\authservice.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\authservice.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\interfaces\\idrrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\interfaces\\idrrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{326B67AE-0D22-497A-866A-1C2AFBB61C0A}|AuthService\\AuthService.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{326B67AE-0D22-497A-866A-1C2AFBB61C0A}|AuthService\\AuthService.csproj|solutionrelative:authservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\doctor_authcmd\\drregistercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\doctor_authcmd\\drregistercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\doctor_authcmd\\handler\\drregistercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\doctor_authcmd\\handler\\drregistercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\doctor_authcmd\\drlogincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\doctor_authcmd\\drlogincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\common\\dtos\\doctordtos\\drloginresdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\common\\dtos\\doctordtos\\drloginresdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CC89651-77BB-4ED4-B88D-E3FB0A685358}|AuthService.Domain\\AuthService.Domain.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.domain\\entities\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CC89651-77BB-4ED4-B88D-E3FB0A685358}|AuthService.Domain\\AuthService.Domain.csproj|solutionrelative:authservice.domain\\entities\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{326B67AE-0D22-497A-866A-1C2AFBB61C0A}|AuthService\\AuthService.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice\\controllers\\patientauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{326B67AE-0D22-497A-866A-1C2AFBB61C0A}|AuthService\\AuthService.csproj|solutionrelative:authservice\\controllers\\patientauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\doctor_authcmd\\handler\\dremailverifycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\doctor_authcmd\\handler\\dremailverifycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C051581-1D47-4069-8598-7CAC017D4ED7}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.infrastructure\\configurations_\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C051581-1D47-4069-8598-7CAC017D4ED7}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|solutionrelative:authservice.infrastructure\\configurations_\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C051581-1D47-4069-8598-7CAC017D4ED7}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C051581-1D47-4069-8598-7CAC017D4ED7}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|solutionrelative:authservice.infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C051581-1D47-4069-8598-7CAC017D4ED7}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.infrastructure\\repositories\\patientrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C051581-1D47-4069-8598-7CAC017D4ED7}|AuthService.Infrastructure\\AuthService.Infrastructure.csproj|solutionrelative:authservice.infrastructure\\repositories\\patientrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\handlers\\pateint_authhandler\\patientrespasscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\handlers\\pateint_authhandler\\patientrespasscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\patient_authcmd\\handler\\patientregistercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\patient_authcmd\\handler\\patientregistercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\handlers\\pateint_authhandler\\patientemailverifycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\handlers\\pateint_authhandler\\patientemailverifycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\doctor_authcmd\\dremailverifycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\doctor_authcmd\\dremailverifycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice.application\\commands\\handlers\\pateint_authhandler\\patientforgotpasswordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8C2B22B-E540-4D7E-9197-1BF16EA8FC20}|AuthService.Application\\AuthService.Application.csproj|solutionrelative:authservice.application\\commands\\handlers\\pateint_authhandler\\patientforgotpasswordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{326B67AE-0D22-497A-866A-1C2AFBB61C0A}|AuthService\\AuthService.csproj|d:\\individual project\\main project health care\\medicloude\\backend\\medicloude\\authservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{326B67AE-0D22-497A-866A-1C2AFBB61C0A}|AuthService\\AuthService.csproj|solutionrelative:authservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,164 +78,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 9,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PateintLoginCommandHandler.cs",
-              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PateintLoginCommandHandler.cs",
-              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PateintLoginCommandHandler.cs",
-              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PateintLoginCommandHandler.cs*",
-              "RelativeToolTip": "AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PateintLoginCommandHandler.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T14:21:23.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PatientEmailVerfyRePassCommandHandler.cs",
-              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientEmailVerfyRePassCommandHandler.cs",
-              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientEmailVerfyRePassCommandHandler.cs",
-              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientEmailVerfyRePassCommandHandler.cs",
-              "RelativeToolTip": "AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientEmailVerfyRePassCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T14:02:04.403Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthService.Infrastructure",
-              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\AuthService.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "AuthService.Infrastructure\\AuthService.Infrastructure.csproj",
-              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\AuthService.Infrastructure.csproj",
-              "RelativeToolTip": "AuthService.Infrastructure\\AuthService.Infrastructure.csproj",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-15T14:10:43.404Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthService.Application",
-              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\AuthService.Application.csproj",
-              "RelativeDocumentMoniker": "AuthService.Application\\AuthService.Application.csproj",
-              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\AuthService.Application.csproj",
-              "RelativeToolTip": "AuthService.Application\\AuthService.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-15T14:10:33.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "AuthService.Infrastructure\\Services\\EmailService.cs",
-              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\Services\\EmailService.cs",
-              "RelativeToolTip": "AuthService.Infrastructure\\Services\\EmailService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T14:03:12.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PatientRepo.cs",
-              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\Repositories\\PatientRepo.cs",
-              "RelativeDocumentMoniker": "AuthService.Infrastructure\\Repositories\\PatientRepo.cs",
-              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\Repositories\\PatientRepo.cs",
-              "RelativeToolTip": "AuthService.Infrastructure\\Repositories\\PatientRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T14:01:08.752Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService\\Program.cs",
-              "RelativeDocumentMoniker": "AuthService\\Program.cs",
-              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService\\Program.cs",
-              "RelativeToolTip": "AuthService\\Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T13:55:41.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ServiceRegistration.cs",
-              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\Configurations_\\ServiceRegistration.cs",
-              "RelativeDocumentMoniker": "AuthService.Infrastructure\\Configurations_\\ServiceRegistration.cs",
-              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\Configurations_\\ServiceRegistration.cs",
-              "RelativeToolTip": "AuthService.Infrastructure\\Configurations_\\ServiceRegistration.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T13:54:46.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PatientResPassCommandHandler.cs",
-              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientResPassCommandHandler.cs",
-              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientResPassCommandHandler.cs",
-              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientResPassCommandHandler.cs",
-              "RelativeToolTip": "AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientResPassCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T13:53:20.031Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PatientRegisterCommandHandler.cs",
-              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientRegisterCommandHandler.cs",
-              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientRegisterCommandHandler.cs",
-              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientRegisterCommandHandler.cs",
-              "RelativeToolTip": "AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientRegisterCommandHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T13:52:42.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PatientForgotPasswordCommandHandler.cs",
-              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientForgotPasswordCommandHandler.cs",
-              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientForgotPasswordCommandHandler.cs",
-              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientForgotPasswordCommandHandler.cs",
-              "RelativeToolTip": "AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientForgotPasswordCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T13:51:00.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PatientEmailVerifyCommandHandler.cs",
-              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientEmailVerifyCommandHandler.cs",
-              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientEmailVerifyCommandHandler.cs",
-              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientEmailVerifyCommandHandler.cs",
-              "RelativeToolTip": "AuthService.Application\\Commands\\Handlers\\Pateint_authHandler\\PatientEmailVerifyCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T13:50:17.013Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -223,6 +87,227 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PateintLoginCommandHandler.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Patient_authCmd\\Handler\\PateintLoginCommandHandler.cs",
+              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Patient_authCmd\\Handler\\PateintLoginCommandHandler.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Patient_authCmd\\Handler\\PateintLoginCommandHandler.cs",
+              "RelativeToolTip": "AuthService.Application\\Commands\\Patient_authCmd\\Handler\\PateintLoginCommandHandler.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T15:34:56.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DrLoginCommandHandler.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Doctor_authCmd\\Handler\\DrLoginCommandHandler.cs",
+              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Doctor_authCmd\\Handler\\DrLoginCommandHandler.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Doctor_authCmd\\Handler\\DrLoginCommandHandler.cs",
+              "RelativeToolTip": "AuthService.Application\\Commands\\Doctor_authCmd\\Handler\\DrLoginCommandHandler.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAiwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T15:33:18.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DrLoginResDto.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Common\\DTOs\\DoctorDTOs\\DrLoginResDto.cs",
+              "RelativeDocumentMoniker": "AuthService.Application\\Common\\DTOs\\DoctorDTOs\\DrLoginResDto.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Common\\DTOs\\DoctorDTOs\\DrLoginResDto.cs",
+              "RelativeToolTip": "AuthService.Application\\Common\\DTOs\\DoctorDTOs\\DrLoginResDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T15:31:54.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DrLoginCommand.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Doctor_authCmd\\DrLoginCommand.cs",
+              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Doctor_authCmd\\DrLoginCommand.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Doctor_authCmd\\DrLoginCommand.cs",
+              "RelativeToolTip": "AuthService.Application\\Commands\\Doctor_authCmd\\DrLoginCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T15:30:23.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PatientAuthController.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService\\Controllers\\PatientAuthController.cs",
+              "RelativeDocumentMoniker": "AuthService\\Controllers\\PatientAuthController.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService\\Controllers\\PatientAuthController.cs",
+              "RelativeToolTip": "AuthService\\Controllers\\PatientAuthController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwD0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T15:20:35.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DrEmailVerifyCommandHandler.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Doctor_authCmd\\Handler\\DrEmailVerifyCommandHandler.cs",
+              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Doctor_authCmd\\Handler\\DrEmailVerifyCommandHandler.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Doctor_authCmd\\Handler\\DrEmailVerifyCommandHandler.cs",
+              "RelativeToolTip": "AuthService.Application\\Commands\\Doctor_authCmd\\Handler\\DrEmailVerifyCommandHandler.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAuwD0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T15:02:59.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DrEmailVerifyCommand.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Doctor_authCmd\\DrEmailVerifyCommand.cs",
+              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Doctor_authCmd\\DrEmailVerifyCommand.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Doctor_authCmd\\DrEmailVerifyCommand.cs",
+              "RelativeToolTip": "AuthService.Application\\Commands\\Doctor_authCmd\\DrEmailVerifyCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T15:02:10.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DoctorAuthController.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService\\Controllers\\DoctorAuthController.cs",
+              "RelativeDocumentMoniker": "AuthService\\Controllers\\DoctorAuthController.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService\\Controllers\\DoctorAuthController.cs",
+              "RelativeToolTip": "AuthService\\Controllers\\DoctorAuthController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAgwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T14:53:52.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Domain\\Entities\\Doctor.cs",
+              "RelativeDocumentMoniker": "AuthService.Domain\\Entities\\Doctor.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Domain\\Entities\\Doctor.cs",
+              "RelativeToolTip": "AuthService.Domain\\Entities\\Doctor.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswBAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T14:48:43.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PatientRepo.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\Repositories\\PatientRepo.cs",
+              "RelativeDocumentMoniker": "AuthService.Infrastructure\\Repositories\\PatientRepo.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\Repositories\\PatientRepo.cs",
+              "RelativeToolTip": "AuthService.Infrastructure\\Repositories\\PatientRepo.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAswFkAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T14:36:14.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PatientRegisterCommandHandler.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Patient_authCmd\\Handler\\PatientRegisterCommandHandler.cs",
+              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Patient_authCmd\\Handler\\PatientRegisterCommandHandler.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Patient_authCmd\\Handler\\PatientRegisterCommandHandler.cs",
+              "RelativeToolTip": "AuthService.Application\\Commands\\Patient_authCmd\\Handler\\PatientRegisterCommandHandler.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAYwDsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T14:37:43.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DrRegisterCommandHandler.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Doctor_authCmd\\Handler\\DrRegisterCommandHandler.cs",
+              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Doctor_authCmd\\Handler\\DrRegisterCommandHandler.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Doctor_authCmd\\Handler\\DrRegisterCommandHandler.cs",
+              "RelativeToolTip": "AuthService.Application\\Commands\\Doctor_authCmd\\Handler\\DrRegisterCommandHandler.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAvwDwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T14:27:52.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\Configurations_\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "AuthService.Infrastructure\\Configurations_\\ServiceRegistration.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\Configurations_\\ServiceRegistration.cs",
+              "RelativeToolTip": "AuthService.Infrastructure\\Configurations_\\ServiceRegistration.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T14:29:47.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DrRepo.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\Repositories\\DrRepo.cs",
+              "RelativeDocumentMoniker": "AuthService.Infrastructure\\Repositories\\DrRepo.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Infrastructure\\Repositories\\DrRepo.cs",
+              "RelativeToolTip": "AuthService.Infrastructure\\Repositories\\DrRepo.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAWwHcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T14:29:32.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IDrRepo.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Interfaces\\IDrRepo.cs",
+              "RelativeDocumentMoniker": "AuthService.Application\\Interfaces\\IDrRepo.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Interfaces\\IDrRepo.cs",
+              "RelativeToolTip": "AuthService.Application\\Interfaces\\IDrRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T14:29:04.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DrRegisterCommand.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Doctor_authCmd\\DrRegisterCommand.cs",
+              "RelativeDocumentMoniker": "AuthService.Application\\Commands\\Doctor_authCmd\\DrRegisterCommand.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService.Application\\Commands\\Doctor_authCmd\\DrRegisterCommand.cs",
+              "RelativeToolTip": "AuthService.Application\\Commands\\Doctor_authCmd\\DrRegisterCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T14:24:25.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService\\Program.cs",
+              "RelativeDocumentMoniker": "AuthService\\Program.cs",
+              "ToolTip": "D:\\Individual project\\Main Project Health Care\\MediCloude\\Backend\\MEDICLOUDE\\AuthService\\Program.cs",
+              "RelativeToolTip": "AuthService\\Program.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T08:14:07.268Z",
+              "EditorCaption": ""
             }
           ]
         }

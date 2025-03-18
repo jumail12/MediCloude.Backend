@@ -13,3 +13,4 @@ D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\Aut
 D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService.Application\bin\Debug\net8.0\AuthService.Domain.dll
 D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService.Application\bin\Debug\net8.0\AuthService.Domain.pdb
 D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService.Application\obj\Debug\net8.0\AuthServ.67992DEE.Up2Date
+D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService.Application\obj\Debug\net8.0\AuthService.Application.sourcelink.json

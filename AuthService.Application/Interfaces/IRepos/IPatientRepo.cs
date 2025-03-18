@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuthService.Application.Interfaces
+namespace AuthService.Application.Interfaces.IRepos
 {
     public interface IPatientRepo
     {
@@ -17,5 +17,7 @@ namespace AuthService.Application.Interfaces
         Task<List<VerifyIdentity>> GetAllVeriFyIdentity();
         Task<bool> AddNewVerifiedPatient(Patient newVerifiedPatient);
         Task<bool> SaveAsync();
+
+
     }
 }

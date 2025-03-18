@@ -16,6 +16,8 @@ namespace AuthService.Application.Commands.Patient_authCmd
 
         [Required(ErrorMessage = "Enter a strong password!")]
         [MinLength(6, ErrorMessage = "Password must be at least 6 characters long.")]
+        [RegularExpression(@"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$",
+       ErrorMessage = "Password must contain at least one letter, one number, and one special character.")]
         public string New_password { get; set; }
     }
 }

@@ -1,10 +1,10 @@
 ﻿using AuthService.Application.Commands.Patient_authCmd;
-using AuthService.Application.Interfaces;
+using AuthService.Application.Interfaces.IRepos;
 using MediatR;
 using System.ComponentModel.DataAnnotations;
 
 
-namespace AuthService.Application.Commands.Handlers.Pateint_authHandler
+namespace AuthService.Application.Commands.Patient_authCmd.Handler
 {
 
     public class PatientResPassCommandHandler : IRequestHandler<PatientResPassCommand, string>
@@ -18,10 +18,10 @@ namespace AuthService.Application.Commands.Handlers.Pateint_authHandler
         {
             try
             {
-                var Allpatients=await _repo.GetAllPatients();
-                var patient=Allpatients.FirstOrDefault(a=>a.Email==request.Email);
+                var Allpatients = await _repo.GetAllPatients();
+                var patient = Allpatients.FirstOrDefault(a => a.Email == request.Email);
 
-                if (patient==null)
+                if (patient == null)
                 {
                     throw new ValidationException("User not found");
                 }

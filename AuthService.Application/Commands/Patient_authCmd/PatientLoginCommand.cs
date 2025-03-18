@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using AuthService.Application.Common.DTOs.PatientDTOs;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AuthService.Application.Commands.Patient_authCmd
 {
-    public  record PatientLoginCommand : IRequest<string>
+    public  record PatientLoginCommand : IRequest<PatientLoginResDto>
     {
         [Required]
         [EmailAddress(ErrorMessage = "Email is required")]

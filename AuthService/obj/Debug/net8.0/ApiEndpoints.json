@@ -1,5 +1,101 @@
 [
   {
+    "ContainingType": "AuthService.Controllers.DoctorAuthController",
+    "Method": "ForgotPw",
+    "RelativePath": "api/DoctorAuth/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "forgotPassword",
+        "Type": "AuthService.Application.Commands.Doctor_authCmd.DrForgotPasswordCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthService.Controllers.DoctorAuthController",
+    "Method": "Login",
+    "RelativePath": "api/DoctorAuth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "drLogin",
+        "Type": "AuthService.Application.Commands.Doctor_authCmd.DrLoginCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthService.Controllers.DoctorAuthController",
+    "Method": "Register",
+    "RelativePath": "api/DoctorAuth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "drRegister",
+        "Type": "AuthService.Application.Commands.Doctor_authCmd.DrRegisterCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthService.Controllers.DoctorAuthController",
+    "Method": "ResetPw",
+    "RelativePath": "api/DoctorAuth/reset-password",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "drResPass",
+        "Type": "AuthService.Application.Commands.Doctor_authCmd.DrResPassCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthService.Controllers.DoctorAuthController",
+    "Method": "EmailVerfy",
+    "RelativePath": "api/DoctorAuth/verify-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "drEmailVerify",
+        "Type": "AuthService.Application.Commands.Doctor_authCmd.DrEmailVerifyCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthService.Controllers.DoctorAuthController",
+    "Method": "VerifyRePassOtp",
+    "RelativePath": "api/DoctorAuth/verify-otp-reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "drEmailVerfyRePass",
+        "Type": "AuthService.Application.Commands.Doctor_authCmd.DrEmailVerfyRePassCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AuthService.Controllers.PatientAuthController",
     "Method": "ForgotPassword",
     "RelativePath": "api/PatientAuth/forgot-password",
@@ -10,6 +106,22 @@
       {
         "Name": "patientForgotPassword",
         "Type": "AuthService.Application.Commands.Patient_authCmd.PatientForgotPasswordCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthService.Controllers.PatientAuthController",
+    "Method": "Login",
+    "RelativePath": "api/PatientAuth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientLogin",
+        "Type": "AuthService.Application.Commands.Patient_authCmd.PatientLoginCommand",
         "IsRequired": true
       }
     ],

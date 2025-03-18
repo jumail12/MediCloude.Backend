@@ -19,12 +19,8 @@ namespace AuthService.Domain.Entities
         [Required(ErrorMessage = "Enter a strong password!")]
         [MinLength(6, ErrorMessage = "Password must be at least 6 characters long.")]
         public string Password { get; set; }
-
-        [Required(ErrorMessage = "Specialization is required!")]
-        public Guid Specialization_id { get; set; }
-
-        [Required(ErrorMessage = "License number is required!")]
-        public string Medical_license_number { get; set; }
+        public Guid? Specialization_id { get; set; }
+        public string? Medical_license_number { get; set; }
 
         public bool Is_approved { get; set; } = false;
         public bool Is_blocked { get; set; } = false;

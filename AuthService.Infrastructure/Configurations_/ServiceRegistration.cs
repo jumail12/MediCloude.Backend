@@ -1,5 +1,5 @@
-﻿
-using AuthService.Application.Interfaces;
+﻿using AuthService.Application.Interfaces.IRepos;
+using AuthService.Application.Interfaces.IServices;
 using AuthService.Infrastructure.Persistance;
 using AuthService.Infrastructure.Repositories;
 using AuthService.Infrastructure.Services;
@@ -26,11 +26,13 @@ namespace AuthService.Infrastructure.Configurations_
         public static void RepoConfiguration(this IServiceCollection services)
         {
             services.AddScoped<IPatientRepo, PatientRepo>();
+            services.AddScoped<IDrRepo,DrRepo>();
         }
 
         public static void ServiceConfiguration(this IServiceCollection services)
         {
             services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<ICommonService, CommonService>();
         }
 
 

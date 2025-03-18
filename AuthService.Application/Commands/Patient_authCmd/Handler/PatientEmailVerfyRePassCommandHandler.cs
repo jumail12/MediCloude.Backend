@@ -1,5 +1,5 @@
 ﻿using AuthService.Application.Commands.Patient_authCmd;
-using AuthService.Application.Interfaces;
+using AuthService.Application.Interfaces.IRepos;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuthService.Application.Commands.Handlers.Pateint_authHandler
+namespace AuthService.Application.Commands.Patient_authCmd.Handler
 {
     public class PatientEmailVerfyRePassCommandHandler : IRequestHandler<PatientEmailVerfyRePassCommand, string>
     {

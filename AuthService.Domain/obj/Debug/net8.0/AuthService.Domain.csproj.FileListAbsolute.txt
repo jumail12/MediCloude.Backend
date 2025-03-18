@@ -9,3 +9,4 @@ D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\Aut
 D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService.Domain\obj\Debug\net8.0\refint\AuthService.Domain.dll
 D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.pdb
 D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService.Domain\obj\Debug\net8.0\ref\AuthService.Domain.dll
+D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.sourcelink.json

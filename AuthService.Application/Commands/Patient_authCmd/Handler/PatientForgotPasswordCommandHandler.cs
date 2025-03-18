@@ -1,14 +1,15 @@
 ﻿using AuthService.Application.Commands.Patient_authCmd;
-using AuthService.Application.Interfaces;
+using AuthService.Application.Interfaces.IRepos;
+using AuthService.Application.Interfaces.IServices;
 using AuthService.Domain.Entities;
 using MediatR;
 using System.ComponentModel.DataAnnotations;
 
-namespace AuthService.Application.Commands.Handlers.Pateint_authHandler
+namespace AuthService.Application.Commands.Patient_authCmd.Handler
 {
     public class PatientForgotPasswordCommandHandler : IRequestHandler<PatientForgotPasswordCommand, string>
     {
-      
+
         private readonly IEmailService _emailService;
         private readonly IPatientRepo _pateintRepo;
         public PatientForgotPasswordCommandHandler(IPatientRepo repo, IEmailService emailService)

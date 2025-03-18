@@ -17,3 +17,4 @@ D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\Aut
 D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService.Infrastructure\obj\Debug\net8.0\ref\AuthService.Infrastructure.dll
 D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService.Infrastructure\bin\Debug\net8.0\AuthService.Application.dll
 D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService.Infrastructure\bin\Debug\net8.0\AuthService.Application.pdb
+D:\Individual project\Main Project Health Care\MediCloude\Backend\MEDICLOUDE\AuthService.Infrastructure\obj\Debug\net8.0\AuthService.Infrastructure.sourcelink.json
