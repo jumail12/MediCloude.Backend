@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuthService.Application.Common.DTOs.DoctorDTOs
+namespace AuthService.Application.Common.DTOs.AdminDTOs
 {
-    public class DrLoginResDto
+    public class AdminLoginResDto
     {
-        public Guid Id { get; set; }
-        public string? Doctor_name { get; set; }
+        public Guid Id { get; set; } 
         public string Email { get; set; }
         public string? Refresh_token { get; set; }
         public string? Access_token { get; set; }

@@ -1,5 +1,4 @@
-﻿using AuthService.Application.Common.DTOs.DoctorDTOs;
-using AuthService.Application.Common.DTOs.PatientDTOs;
+﻿using AuthService.Application.Common.DTOs.AdminDTOs;
 using AuthService.Application.Interfaces.IRepos;
 using AuthService.Application.Interfaces.IServices;
 using AuthService.Domain.Entities;
@@ -14,67 +13,63 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuthService.Application.Commands.Doctor_authCmd.Handler
+namespace AuthService.Application.Commands.Admin_authCmd.Handler
 {
-    public class DrLoginCommandHandler : IRequestHandler<DrLoginCommand, DrLoginResDto>
+    public class AdminLoginCommandHandler : IRequestHandler<AdminLoginCommand,AdminLoginResDto>
     {
-        private readonly IDrRepo _repo;
+        private readonly IAdminRepo _adminRepo;
         private readonly ICommonService _commonService;
-        public DrLoginCommandHandler(IDrRepo repo, ICommonService commonService)
+
+        public AdminLoginCommandHandler(IAdminRepo adminRepo,ICommonService commonService)
         {
-            _repo = repo;
+            _adminRepo = adminRepo;
             _commonService = commonService;
         }
 
-        public async Task<DrLoginResDto> Handle(DrLoginCommand request, CancellationToken cancellationToken)
+        public async Task<AdminLoginResDto> Handle(AdminLoginCommand request, CancellationToken cancellationToken)
         {
             try
             {
-                var allDrs=await _repo.GetAllDrs();
-                var dr= allDrs.FirstOrDefault(a=>a.Email==request.Email);
+                var admins = await _adminRepo.GetAdmins();
+                var admin = admins.FirstOrDefault(a=>a.Email==request.Email);
 
-                if (dr == null)
+                if (admin==null)
                 {
                     throw new ValidationException("not found");
                 }
 
-                bool isValidPassword = BCrypt.Net.BCrypt.Verify(request.Password, dr.Password);
+                bool isValidPassword = BCrypt.Net.BCrypt.Verify(request.Password, admin.Password);
                 if (!isValidPassword)
                 {
                     throw new ValidationException("Invalid Password");
                 }
 
-                if (dr.Is_blocked == true)
-                {
-                    throw new UnauthorizedAccessException("Your account is Blocked");
-                }
-
-                string JWTtoken = GenerateJwtToken(dr);
+                string JWTtoken = GenerateJwtToken(admin);
                 string refresh_token = GenerateRefreshToken();
 
                 var newRefreshEntity = new RefreshToken
                 {
-                    userId = dr.Id,
+                    userId = admin.Id,
                     Refresh_token = refresh_token,
                     Expires = DateTime.UtcNow.AddDays(Convert.ToDouble(7)),
                     Created_on = DateTime.UtcNow,
                     Updated_on = DateTime.UtcNow,
-                    Created_by = dr.Doctor_name,
-                    Updated_by = dr.Doctor_name,
+                    Created_by = admin.Email,
+                    Updated_by = admin.Email,
                 };
+
 
                 await _commonService.AddResfreshTokenAsync(newRefreshEntity);
 
-                var loginRes = new DrLoginResDto
+                var res = new AdminLoginResDto()
                 {
-                    Id = dr.Id,
-                    Email=dr.Email,
-                    Doctor_name = dr.Doctor_name,
-                    Refresh_token = refresh_token,
+                    Id=admin.Id,
+                    Email = request.Email,
                     Access_token = JWTtoken,
+                    Refresh_token = refresh_token,
                 };
 
-                return loginRes;
+                return res;
 
             }
             catch (ValidationException)
@@ -87,11 +82,11 @@ namespace AuthService.Application.Commands.Doctor_authCmd.Handler
             }
         }
 
-        private string GenerateJwtToken(Doctor? dr)
+        private string GenerateJwtToken(Admin admin)
         {
-            if (dr == null)
+            if (admin == null)
             {
-                throw new Exception("Patient not found.");
+                throw new UnauthorizedAccessException("Admin not found.");
             }
 
             var securityKey = Environment.GetEnvironmentVariable("JWT_SECRET_KEY");
@@ -106,10 +101,10 @@ namespace AuthService.Application.Commands.Doctor_authCmd.Handler
 
             var claims = new[]
                {
-                new Claim(ClaimTypes.NameIdentifier, dr.Id.ToString()),
-                new Claim(ClaimTypes.Name, dr.Email),
-                new Claim(ClaimTypes.Role,"Doctor")
-            };
+                    new Claim(ClaimTypes.NameIdentifier, admin.Id.ToString()),
+                    new Claim(ClaimTypes.Name, admin.Email),
+                    new Claim(ClaimTypes.Role,"Admin")
+               };
 
             var token = new JwtSecurityToken(
                 claims: claims,

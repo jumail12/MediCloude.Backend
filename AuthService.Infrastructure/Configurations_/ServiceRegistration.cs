@@ -27,6 +27,7 @@ namespace AuthService.Infrastructure.Configurations_
         {
             services.AddScoped<IPatientRepo, PatientRepo>();
             services.AddScoped<IDrRepo,DrRepo>();
+            services.AddScoped<IAdminRepo, AdminRepo>();
         }
 
         public static void ServiceConfiguration(this IServiceCollection services)
