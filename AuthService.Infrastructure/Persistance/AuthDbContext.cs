@@ -15,7 +15,6 @@ namespace AuthService.Infrastructure.Persistance
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Patient> Patients { get; set; }
-        public DbSet<Specialization_doctor> Specializations { get; set; }
         public DbSet<VerifyIdentity> VerifyIdentitys { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
 

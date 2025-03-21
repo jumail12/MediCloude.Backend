@@ -14,12 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Quries\Handlers\" />
+    <Folder Include="Interfaces\IServices\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AuthService.Domain\AuthService.Domain.csproj" />
-    <ProjectReference Include="..\Contarcts\Contarcts.csproj" />
+    <ProjectReference Include="..\BusinessService.Domain\BusinessService.Domain.csproj" />
   </ItemGroup>
 
 </Project>

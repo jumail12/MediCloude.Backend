@@ -1,16 +1,15 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuthService.Domain.Entities
+namespace BusinessService.Aplication.Commands.SpecializationDrCommand
 {
-    public class Specialization_doctor : AuditableEntity
+    public record SpecializationDrAddCmd : IRequest<string>
     {
-        [Key]
-        public Guid Id { get; set; }
         [Required(ErrorMessage = "Specialization Required")]
         public string Category { get; set; }
     }

@@ -19,12 +19,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Consumers\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AuthService.Domain\AuthService.Domain.csproj" />
-	  <ProjectReference Include="..\AuthService.Application\AuthService.Application.csproj" />
+    <ProjectReference Include="..\AuthService.Application\AuthService.Application.csproj" />
+    <ProjectReference Include="..\BusinessService.Aplication\BusinessService.Aplication.csproj" />
+    <ProjectReference Include="..\BusinessService.Domain\BusinessService.Domain.csproj" />
   </ItemGroup>
 
 </Project>
