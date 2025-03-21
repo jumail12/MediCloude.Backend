@@ -126,5 +126,23 @@ namespace AuthService.Controllers
                 return StatusCode(500, new ApiResponse<string>(500, "An Internal Error occurred", null, ex.Message));
             }
         }
+
+        [HttpPatch("verify-license")]
+        public async Task<IActionResult> VerifyLicense([FromBody]DrLicenseVerifyCommand drLicenseVerify)
+        {
+            try
+            {
+                var res= await _send.Send(drLicenseVerify);
+                return Ok(new ApiResponse<string>(200, "success", res, null));
+            }
+            catch (ValidationException ex)
+            {
+                return BadRequest(new ApiResponse<string>(400, "Validation failed", null, ex.Message));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ApiResponse<string>(500, "An Internal Error occurred", null, ex.Message));
+            }
+        }
     }
 }

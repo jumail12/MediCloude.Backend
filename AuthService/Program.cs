@@ -68,6 +68,10 @@ namespace AuthService
             Env.Load();
             builder.Services.AddDatabaseConfiguration();
 
+            //rabbitmq
+            builder.Services.RabbitMqResponseConfig();
+            builder.Services.RabbitMqRequestConfig();
+
             //jwt
             builder.Services.AddAuthentication(options =>
             {
