@@ -130,5 +130,18 @@ namespace AuthService.Infrastructure.Repositories
                 throw new Exception(ex.InnerException?.Message ?? ex.ToString());
             }
         }
+
+        public async Task<List<Doctor>> GetAllLicenseVeriDrs()
+        {
+            try
+            {
+                var res= await _authDb.Doctors.Where(a=>!a.Is_approved && !a.Is_blocked && !a.Is_deleted).ToListAsync();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.ToString());
+            }
+        }
     }
 }

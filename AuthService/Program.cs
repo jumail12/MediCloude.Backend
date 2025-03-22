@@ -69,9 +69,8 @@ namespace AuthService
             builder.Services.AddDatabaseConfiguration();
 
             //rabbitmq
-            builder.Services.RabbitMqResponseConfig();
-            builder.Services.RabbitMqRequestConfig();
-
+            builder.Services.RabbitMqConfig();
+           
             //jwt
             builder.Services.AddAuthentication(options =>
             {

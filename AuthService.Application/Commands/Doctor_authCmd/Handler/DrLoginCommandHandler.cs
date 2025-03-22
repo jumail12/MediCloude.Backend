@@ -44,10 +44,18 @@ namespace AuthService.Application.Commands.Doctor_authCmd.Handler
                     throw new ValidationException("Invalid Password");
                 }
 
-                if (dr.Is_blocked == true)
+                if (!dr.Is_approved || dr.Is_blocked)
                 {
-                    throw new UnauthorizedAccessException("Your account is Blocked");
+                    if (!dr.Is_approved)
+                    {
+                        throw new UnauthorizedAccessException("Your license verification could not be completed. Please check your credentials or contact support for assistance.");
+                    }
+                    else
+                    {
+                        throw new Exception("Your account is currently blocked. Please contact support for assistance.");
+                    }
                 }
+
 
                 string JWTtoken = GenerateJwtToken(dr);
                 string refresh_token = GenerateRefreshToken();

@@ -65,8 +65,7 @@ namespace BusinessService
             configuration.RegisterServicesFromAssembly(typeof(SpecializationDrAddCmd).Assembly));
 
             //rabbitMQ
-            builder.Services.RabbitMqRequestConfig();
-            builder.Services.RabbitMqResponseConfig();
+            builder.Services.RabbitMqConfig();
 
             builder.Services.AddAuthentication(options =>
             {

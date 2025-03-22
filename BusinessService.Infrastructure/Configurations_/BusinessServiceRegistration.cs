@@ -1,17 +1,11 @@
-﻿using AuthService.Application.Interfaces.IRepos;
-using AuthService.Application.Interfaces.IServices;
-using BusinessService.Aplication.Interfaces.IRepos;
+﻿using BusinessService.Aplication.Interfaces.IRepos;
 using BusinessService.Infrastructure.Consumers.Specialization;
 using BusinessService.Infrastructure.Persistance;
 using BusinessService.Infrastructure.Repositories;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BusinessService.Infrastructure.Configurations_
 {
@@ -38,14 +32,10 @@ namespace BusinessService.Infrastructure.Configurations_
 
         }
 
-        //request rabbitmq
-        public static void RabbitMqRequestConfig(this IServiceCollection services)
-        {
+     
 
-        }
-
-        //reponse rabbitmq
-        public static void RabbitMqResponseConfig(this IServiceCollection services)
+        //rabbitmq
+        public static void RabbitMqConfig(this IServiceCollection services)
         {
 
             var host= Environment.GetEnvironmentVariable("RabbitMqHostB");
@@ -55,7 +45,9 @@ namespace BusinessService.Infrastructure.Configurations_
             //spelization esits response
             services.AddMassTransit(config =>
             {
-                config.AddConsumer<SpecializationConsumer>(); //register consumer
+                config.AddConsumer<SpecializationConsumer>(); //register consumer for spl exists
+                config.AddConsumer<GetAllSpecializationConsumer>(); //register consumer for geting all spls
+
                 config.UsingRabbitMq((ctx, cfg) =>
                 {
                     cfg.Host(host, h =>
@@ -66,7 +58,12 @@ namespace BusinessService.Infrastructure.Configurations_
 
                     cfg.ReceiveEndpoint("spl-exists-queue", e =>
                     {
-                        e.ConfigureConsumer<SpecializationConsumer>(ctx);  //bind to queue
+                        e.ConfigureConsumer<SpecializationConsumer>(ctx);  //bind to queue for  isExistspl
+                    });
+
+                    cfg.ReceiveEndpoint("spl-getall-queue", e =>
+                    {
+                        e.ConfigureConsumer<GetAllSpecializationConsumer>(ctx);  //bind to queue for getting all spls
                     });
                 });
             });

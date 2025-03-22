@@ -17,5 +17,6 @@ namespace AuthService.Application.Interfaces.IRepos
         Task<bool> RemoveVeriFyIdentity(VerifyIdentity veriFyIdentity);
         Task<List<Doctor>> GetAllDrs();
         Task<bool> SaveAsync();
+        Task<List<Doctor>> GetAllLicenseVeriDrs();
     }
 }

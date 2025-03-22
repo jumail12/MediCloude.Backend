@@ -38,14 +38,14 @@ namespace AuthService.Infrastructure.Configurations_
             services.AddScoped<ICommonService, CommonService>();
         }
 
-        //request rabbitmq
-        public static void RabbitMqRequestConfig(this IServiceCollection services)
+        // rabbitmq
+        public static void RabbitMqConfig(this IServiceCollection services)
         {
             var host = Environment.GetEnvironmentVariable("RabbitMqHostA");
             var username=Environment.GetEnvironmentVariable("RabbitMqUsernameA");
             var password = Environment.GetEnvironmentVariable("RabbitMqPasswordA");
 
-            //spelization esits request
+          
             services.AddMassTransit(config =>
             {
                 config.UsingRabbitMq((ctx, cfg) =>
@@ -56,15 +56,9 @@ namespace AuthService.Infrastructure.Configurations_
                         h.Password(password);
                     });
                 });
-                config.AddRequestClient<SpecializationExistsReq>(new Uri("queue:spl-exists-queue"));
+                config.AddRequestClient<SpecializationExistsReq>(new Uri("queue:spl-exists-queue"));   //spelization esits request
+                config.AddRequestClient<GetAllSpecializationReq>(new Uri("queue:spl-getall-queue"));    //spl get all request
             });
         }
-
-        //reponse rabbitmq
-        public static void RabbitMqResponseConfig(this IServiceCollection services)
-        {
-
-        }
-
     }
 }
