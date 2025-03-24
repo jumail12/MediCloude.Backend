@@ -17,6 +17,7 @@ namespace AuthService.Application.Interfaces.IRepos
         Task<List<VerifyIdentity>> GetAllVeriFyIdentity();
         Task<bool> AddNewVerifiedPatient(Patient newVerifiedPatient);
         Task<bool> SaveAsync();
+        Task<Patient> GetPatientById(Guid id);  
 
 
     }

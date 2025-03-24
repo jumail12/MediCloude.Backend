@@ -1,12 +1,13 @@
 ﻿using AuthService.ApiResponses;
 using AuthService.Application.Commands.Admin_authCmd;
 using AuthService.Application.Common.DTOs.AdminDTOs;
+using AuthService.Application.Common.DTOs.CommonDtos;
 using AuthService.Application.Quries.Admin;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+
 
 namespace AuthService.Controllers
 {
@@ -103,6 +104,29 @@ namespace AuthService.Controllers
                 var res = await _sender.Send(new DrLicenseGetAllQuery(pageNumber,pageSize));
                 return Ok(new ApiResponse<DrLicenseGetAllPageResDto>(200, "success", res, null));
             }
+            catch (ValidationException ex)
+            {
+                return BadRequest(new ApiResponse<string>(400, "Validation failed", null, ex.Message));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ApiResponse<string>(500, "An Internal Error occurred", null, ex.Message));
+            }
+        }
+
+        [HttpPost("refresh-token")]
+        public async Task<IActionResult> TokenService([FromBody] AdminRefreshTokenCommand adminRefreshToken)
+        {
+            try
+            {
+                var res = await _sender.Send(adminRefreshToken);
+                return Ok(new ApiResponse<RefreshTokenResDto>(200, "Success", res, null));
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(new ApiResponse<string>(401, "Unauthroized", null, ex.Message));
+            }
+
             catch (ValidationException ex)
             {
                 return BadRequest(new ApiResponse<string>(400, "Validation failed", null, ex.Message));

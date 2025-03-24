@@ -12,5 +12,6 @@ namespace AuthService.Application.Interfaces.IRepos
         Task<List<Admin>> GetAdmins();
         Task<bool> EmailExists(string email);
         Task<bool> AddAdmin(Admin admin);
+        Task<Admin> GetByIdAsync(Guid id);
     }
 }

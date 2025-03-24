@@ -57,5 +57,18 @@ namespace AuthService.Infrastructure.Repositories
                 throw new Exception(ex.InnerException?.Message ?? ex.Message);
             }
         }
+
+        public async Task<Admin> GetByIdAsync(Guid id)
+        {
+            try
+            {
+                var res = await _authDbContext.Admins.FirstOrDefaultAsync(a=>a.Id==id);
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.Message);
+            }
+        }
     }
 }

@@ -18,5 +18,6 @@ namespace AuthService.Application.Interfaces.IRepos
         Task<List<Doctor>> GetAllDrs();
         Task<bool> SaveAsync();
         Task<List<Doctor>> GetAllLicenseVeriDrs();
+        Task<Doctor> GetByIdAsync(Guid id);   
     }
 }

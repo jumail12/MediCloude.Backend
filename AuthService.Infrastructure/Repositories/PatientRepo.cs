@@ -127,5 +127,18 @@ namespace AuthService.Infrastructure.Repositories
                 throw new Exception(ex.InnerException?.Message ?? ex.ToString());
             }
         }
+
+        public async Task<Patient> GetPatientById(Guid id)
+        {
+            try
+            {
+                var res = await _authDbContext.Patients.FirstOrDefaultAsync(a => a.Patient_id == id);
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.ToString());
+            }
+        }
     }
 }

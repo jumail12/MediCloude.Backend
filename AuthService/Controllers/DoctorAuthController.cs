@@ -1,5 +1,6 @@
 ﻿using AuthService.ApiResponses;
 using AuthService.Application.Commands.Doctor_authCmd;
+using AuthService.Application.Common.DTOs.CommonDtos;
 using AuthService.Application.Common.DTOs.DoctorDTOs;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -135,6 +136,29 @@ namespace AuthService.Controllers
                 var res= await _send.Send(drLicenseVerify);
                 return Ok(new ApiResponse<string>(200, "success", res, null));
             }
+            catch (ValidationException ex)
+            {
+                return BadRequest(new ApiResponse<string>(400, "Validation failed", null, ex.Message));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ApiResponse<string>(500, "An Internal Error occurred", null, ex.Message));
+            }
+        }
+
+        [HttpPost("refresh-token")]
+        public async Task<IActionResult> TokenService([FromBody] DrRefreshTokenCommand drRefreshToken)
+        {
+            try
+            {
+                var res= await _send.Send(drRefreshToken);
+                return Ok(new ApiResponse<RefreshTokenResDto>(200, "Success", res, null));
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(new ApiResponse<string>(401, "Unauthroized", null, ex.Message));
+            }
+
             catch (ValidationException ex)
             {
                 return BadRequest(new ApiResponse<string>(400, "Validation failed", null, ex.Message));
