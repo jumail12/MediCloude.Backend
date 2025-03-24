@@ -46,5 +46,18 @@ namespace BusinessService.Infrastructure.Repositories
                 throw new Exception(ex.InnerException?.Message ?? ex.Message);
             }
         }
+
+        public async Task<Specialization_doctor> GetSplByIdAsync(Guid id)
+        {
+            try
+            {
+                var res= await _context.Specializations.FirstOrDefaultAsync(a=>a.Id == id);
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.Message);
+            }
+        }
     }
 }

@@ -16,6 +16,8 @@ namespace AuthService.Domain.Entities
         [EmailAddress]
         public string Email { get; set; }
 
+        public string? Qualification { get; set; }
+
         [Required(ErrorMessage = "Enter a strong password!")]
         [MinLength(6, ErrorMessage = "Password must be at least 6 characters long.")]
         public string Password { get; set; }

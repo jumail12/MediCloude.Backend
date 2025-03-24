@@ -1,6 +1,7 @@
 
 using BusinessService.Aplication.Commands.SpecializationDrCommand;
 using BusinessService.Infrastructure.Configurations_;
+using BusinessService.Middlewares;
 using DotNetEnv;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -119,6 +120,8 @@ namespace BusinessService
             app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseMiddleware<BusinessServiceUserIdMiddlware>();
             app.MapControllers();
 
             app.Run();

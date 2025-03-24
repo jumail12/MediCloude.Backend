@@ -1,5 +1,6 @@
 ﻿using AuthService.Application.Interfaces.IRepos;
 using AuthService.Application.Interfaces.IServices;
+using AuthService.Infrastructure.Consumers.Doctor;
 using AuthService.Infrastructure.Persistance;
 using AuthService.Infrastructure.Repositories;
 using AuthService.Infrastructure.Services;
@@ -36,6 +37,7 @@ namespace AuthService.Infrastructure.Configurations_
         {
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<ICommonService, CommonService>();
+            services.AddScoped<ICloudinaryService, CloudinaryService>();
         }
 
         // rabbitmq
@@ -48,12 +50,19 @@ namespace AuthService.Infrastructure.Configurations_
           
             services.AddMassTransit(config =>
             {
+                config.AddConsumer<DrByIdConsumer>();  //register consumer for drby id
+
                 config.UsingRabbitMq((ctx, cfg) =>
                 {
                     cfg.Host(host, h =>
                     {
                         h.Username(username);
                         h.Password(password);
+                    });
+
+                    cfg.ReceiveEndpoint("dr-queue", e =>
+                    {
+                        e.ConfigureConsumer<DrByIdConsumer>(ctx);  //bind to queue for DrByid consumer
                     });
                 });
                 config.AddRequestClient<SpecializationExistsReq>(new Uri("queue:spl-exists-queue"));   //spelization esits request

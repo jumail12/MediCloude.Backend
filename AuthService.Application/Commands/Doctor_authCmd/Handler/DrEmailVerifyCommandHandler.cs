@@ -41,7 +41,8 @@ namespace AuthService.Application.Commands.Doctor_authCmd.Handler
                         Created_by = veriUser.Name,
                         Created_on = DateTime.UtcNow,
                         Updated_by = veriUser.Name,
-                        Updated_on = DateTime.UtcNow
+                        Updated_on = DateTime.UtcNow,
+                        Profile= "http://localhost:3001/src/assets/Images/profile.webp"
                     };
                     await _repo.AddNewVerifiedDr(doctor);
                     await _repo.RemoveVeriFyIdentity(veriUser);

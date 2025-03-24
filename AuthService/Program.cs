@@ -1,6 +1,7 @@
 
 using AuthService.Application.Commands.Patient_authCmd;
 using AuthService.Infrastructure.Configurations_;
+using AuthService.Middlewares;
 using DotNetEnv;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -15,8 +16,6 @@ namespace AuthService
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-
 
             builder.Services.AddControllers();
 
@@ -127,6 +126,7 @@ namespace AuthService
             app.UseAuthentication();
             app.UseAuthorization();
 
+            app.UseMiddleware<UserIdMiddlware>();
 
             app.MapControllers();
 

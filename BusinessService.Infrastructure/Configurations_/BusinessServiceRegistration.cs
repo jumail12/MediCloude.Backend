@@ -2,6 +2,7 @@
 using BusinessService.Infrastructure.Consumers.Specialization;
 using BusinessService.Infrastructure.Persistance;
 using BusinessService.Infrastructure.Repositories;
+using Contarcts.Requests.Doctor;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -66,6 +67,9 @@ namespace BusinessService.Infrastructure.Configurations_
                         e.ConfigureConsumer<GetAllSpecializationConsumer>(ctx);  //bind to queue for getting all spls
                     });
                 });
+
+                //request config with queue
+                config.AddRequestClient<DrByIdReq>(new Uri("queue:dr-queue"));   //get dr by id
             });
         }
     }

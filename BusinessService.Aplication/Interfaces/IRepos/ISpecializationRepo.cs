@@ -11,5 +11,6 @@ namespace BusinessService.Aplication.Interfaces.IRepos
     {
         Task<bool> AddSplAsync(Specialization_doctor specialization_);
         Task<List<Specialization_doctor>> GetAllSplAsync();
+        Task<Specialization_doctor> GetSplByIdAsync(Guid id);
     }
 }

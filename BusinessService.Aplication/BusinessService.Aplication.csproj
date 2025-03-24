@@ -20,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AuthService.Domain\AuthService.Domain.csproj" />
     <ProjectReference Include="..\BusinessService.Domain\BusinessService.Domain.csproj" />
+    <ProjectReference Include="..\Contarcts\Contarcts.csproj" />
   </ItemGroup>
 
 </Project>
