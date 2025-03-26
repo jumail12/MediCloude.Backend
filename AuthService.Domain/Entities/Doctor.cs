@@ -1,5 +1,6 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
+using static Contarcts.Common.GenderContarct;
 
 
 namespace AuthService.Domain.Entities
@@ -36,12 +37,8 @@ namespace AuthService.Domain.Entities
 
         [Range(0, 100, ErrorMessage = "Experience must be between 0 and 100 years.")]
         public double? Field_experience { get; set; }
+        
     }
 
-    public enum GenderD
-    {
-        Male,
-        Female,
-        Other
-    }
+
 }

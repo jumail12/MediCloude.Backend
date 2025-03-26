@@ -1,27 +1,28 @@
-﻿using AuthService.Application.Interfaces.IServices;
+﻿using BusinessService.Aplication.Interfaces.IServices;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
-using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Http;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.Principal;
+using System.Text;
+using System.Threading.Tasks;
 
-
-namespace AuthService.Infrastructure.Services
+namespace BusinessService.Infrastructure.Services
 {
     public class CloudinaryService : ICloudinaryService
     {
         private readonly Cloudinary _cloudinary;
-
         public CloudinaryService()
         {
-            var cloudName = Environment.GetEnvironmentVariable("CloudName");
-            var apiKey = Environment.GetEnvironmentVariable("ApiKey");
-            var apiSecret = Environment.GetEnvironmentVariable("ApiSecret");
+            var cloudName = Environment.GetEnvironmentVariable("CloudNameB");
+            var apiKey = Environment.GetEnvironmentVariable("ApiKeyB");
+            var apiSecret = Environment.GetEnvironmentVariable("ApiSecretB");
 
             var account = new Account(cloudName, apiKey, apiSecret);
             _cloudinary = new Cloudinary(account);
         }
-
 
         public async Task<string> UploadProfileImageAsync(IFormFile file)
         {
@@ -39,7 +40,5 @@ namespace AuthService.Infrastructure.Services
                 return uploadResult.SecureUrl.ToString();
             }
         }
-
-
     }
 }

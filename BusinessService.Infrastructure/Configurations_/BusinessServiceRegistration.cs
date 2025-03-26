@@ -1,7 +1,9 @@
 ﻿using BusinessService.Aplication.Interfaces.IRepos;
+using BusinessService.Aplication.Interfaces.IServices;
 using BusinessService.Infrastructure.Consumers.Specialization;
 using BusinessService.Infrastructure.Persistance;
 using BusinessService.Infrastructure.Repositories;
+using BusinessService.Infrastructure.Services;
 using Contarcts.Requests.Doctor;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
@@ -26,11 +28,12 @@ namespace BusinessService.Infrastructure.Configurations_
         public static void RepoConfiguration(this IServiceCollection services)
         {
                 services.AddScoped<ISpecializationRepo,SpecializationRepo>();
+                services.AddScoped<IDrAvailabilityRepo,DrAvailabilityRepo>();
         }
 
         public static void ServiceConfiguration(this IServiceCollection services)
         {
-
+            services.AddScoped<ICloudinaryService, CloudinaryService>();
         }
 
      
@@ -70,6 +73,7 @@ namespace BusinessService.Infrastructure.Configurations_
 
                 //request config with queue
                 config.AddRequestClient<DrByIdReq>(new Uri("queue:dr-queue"));   //get dr by id
+                config.AddRequestClient<DrProfileUpdationReq>(new Uri("queue:dr-proupdate-queue")); 
             });
         }
     }

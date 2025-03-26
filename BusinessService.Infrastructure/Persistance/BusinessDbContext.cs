@@ -9,6 +9,7 @@ namespace BusinessService.Infrastructure.Persistance
         public BusinessDbContext(DbContextOptions<BusinessDbContext> options): base(options) { }
 
         public DbSet<Specialization_doctor> Specializations { get; set; }
+        public DbSet<DrAvailability> DrAvailabilities { get; set; }
 
     }
 }

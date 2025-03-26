@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuthService.Application.Interfaces.IServices
+namespace BusinessService.Aplication.Interfaces.IServices
 {
     public interface ICloudinaryService
     {

@@ -37,7 +37,7 @@ namespace AuthService.Infrastructure.Configurations_
         {
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<ICommonService, CommonService>();
-            services.AddScoped<ICloudinaryService, CloudinaryService>();
+           
         }
 
         // rabbitmq
@@ -51,6 +51,7 @@ namespace AuthService.Infrastructure.Configurations_
             services.AddMassTransit(config =>
             {
                 config.AddConsumer<DrByIdConsumer>();  //register consumer for drby id
+                config.AddConsumer<DrProfileUpdationConsumer>();
 
                 config.UsingRabbitMq((ctx, cfg) =>
                 {
@@ -63,6 +64,10 @@ namespace AuthService.Infrastructure.Configurations_
                     cfg.ReceiveEndpoint("dr-queue", e =>
                     {
                         e.ConfigureConsumer<DrByIdConsumer>(ctx);  //bind to queue for DrByid consumer
+                    });
+                    cfg.ReceiveEndpoint("dr-proupdate-queue", e =>
+                    {
+                        e.ConfigureConsumer<DrProfileUpdationConsumer>(ctx);  //bind to queue for DrUpdation consumer
                     });
                 });
                 config.AddRequestClient<SpecializationExistsReq>(new Uri("queue:spl-exists-queue"));   //spelization esits request
