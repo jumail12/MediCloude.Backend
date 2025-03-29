@@ -52,6 +52,7 @@ namespace AuthService.Infrastructure.Configurations_
             {
                 config.AddConsumer<DrByIdConsumer>();  //register consumer for drby id
                 config.AddConsumer<DrProfileUpdationConsumer>();
+                config.AddConsumer<GetAllDrsConsumer>();
 
                 config.UsingRabbitMq((ctx, cfg) =>
                 {
@@ -68,6 +69,10 @@ namespace AuthService.Infrastructure.Configurations_
                     cfg.ReceiveEndpoint("dr-proupdate-queue", e =>
                     {
                         e.ConfigureConsumer<DrProfileUpdationConsumer>(ctx);  //bind to queue for DrUpdation consumer
+                    });
+                    cfg.ReceiveEndpoint("get-all-drs", e =>
+                    {
+                        e.ConfigureConsumer<GetAllDrsConsumer>(ctx);  
                     });
                 });
                 config.AddRequestClient<SpecializationExistsReq>(new Uri("queue:spl-exists-queue"));   //spelization esits request

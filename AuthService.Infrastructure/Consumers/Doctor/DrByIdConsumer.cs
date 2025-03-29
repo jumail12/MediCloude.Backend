@@ -27,7 +27,7 @@ namespace AuthService.Infrastructure.Consumers.Doctor
                 var res = new DrByIdResponse
                 {
                     Id = context.Message.drid,
-                    Specialization_id = (Guid)doctor.Specialization_id,
+                    Specialization_id =doctor.Specialization_id,
                     Doctor_name=doctor.Doctor_name,
                     Email=doctor.Email,
                     Qualification=doctor.Qualification,
@@ -36,6 +36,7 @@ namespace AuthService.Infrastructure.Consumers.Doctor
                     Profile=doctor.Profile,
                     Field_experience=doctor.Field_experience,
                     Gender=doctor.Gender.ToString(),
+                    Drfee=doctor.Drfee,
                 };
 
                 await context.RespondAsync(res);

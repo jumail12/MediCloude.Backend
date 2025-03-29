@@ -65,5 +65,26 @@ namespace BusinessService.Controllers
             }
         }
 
+        [Authorize(Roles ="Doctor")]
+        [HttpGet("dr-profile-slots")]
+        public async Task<IActionResult> DrProfileAvailabilitySlots(int days)
+        {
+            try
+            {
+                var id = Convert.ToString(HttpContext.Items["UserId"]);
+                var res = await _sender.Send(new DrProfileGetAllAvailabilityByIdQuery(Guid.Parse(id), days));
+                return Ok(new ApiResponse<List<DrAvailabilityByIdResDto>>(200, "success", res, null));
+            }
+            catch (ValidationException ex)
+            {
+                return BadRequest(new ApiResponse<string>(400, "Validation failed", null, ex.Message));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ApiResponse<string>(500, "An Internal Error occurred", null, ex.Message));
+            }
+        }
+
+
     }
 }

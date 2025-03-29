@@ -11,18 +11,14 @@ namespace BusinessService.Domain.Entities
         [Required(ErrorMessage = "Dr id is required")]
         public Guid DrId { get; set; }
 
-        [Required(ErrorMessage = "Appointment day is required")]
-        public Day AppointmentDay { get; set; }
+        [Required(ErrorMessage = "Appointment date is required.")]
+        [Column(TypeName = "date")]  
+        public DateTime AppointmentDate { get; set; }
 
         [Required(ErrorMessage = "Time is required")]
         [Column(TypeName = "time")]
         public TimeSpan AppointmentTime { get; set; }
 
         public bool IsAvailable { get; set; } = true;
-    }
-
-    public enum Day
-    {
-        Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
     }
 }

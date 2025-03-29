@@ -28,6 +28,8 @@ namespace AuthService.Domain.Entities
         public bool Is_approved { get; set; } = false;
         public bool Is_blocked { get; set; } = false;
 
+        public decimal? Drfee { get; set; } = 500;
+
         [Phone(ErrorMessage = "Invalid phone number format.")]
         public string? Phone { get; set; }
 
@@ -37,6 +39,8 @@ namespace AuthService.Domain.Entities
 
         [Range(0, 100, ErrorMessage = "Experience must be between 0 and 100 years.")]
         public double? Field_experience { get; set; }
+
+        public List<string>? SearchString { get; set; }
         
     }
 

@@ -11,8 +11,8 @@ namespace BusinessService.Aplication.Common.DTOs.Availability
 {
     public class DrAvailabilityByIdResDto
     {
-        public string AppointmentDay { get; set; }
-        public List<DrAvailabiliyTimeSlotDto> AppoinmentTimes { get; set; } 
+        public DateTime AppointmentDate { get; set; } // Store full date
+        public List<DrAvailabiliyTimeSlotDto> AppointmentTimes { get; set; }
     }
 
     public class DrAvailabiliyTimeSlotDto

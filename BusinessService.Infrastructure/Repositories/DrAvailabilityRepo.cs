@@ -32,12 +32,14 @@ namespace BusinessService.Infrastructure.Repositories
             }
         }
 
-        public async Task<bool> isExists(Guid drid, Day day, TimeSpan time)
+        public async Task<bool> isExists(Guid drid, DateTime date, TimeSpan time)
         {
             try
             {
-                var res= await _businessDbContext.DrAvailabilities.FirstOrDefaultAsync(a=>a.DrId==drid && a.AppointmentDay==day && a.AppointmentTime==time);
-                return   res != null ? true : false;
+                var res = await _businessDbContext.DrAvailabilities
+                    .FirstOrDefaultAsync(a => a.DrId == drid && a.AppointmentDate == date && a.AppointmentTime == time);
+
+                return res != null;
             }
             catch (Exception ex)
             {
@@ -45,12 +47,15 @@ namespace BusinessService.Infrastructure.Repositories
             }
         }
 
+
         public async Task<List<DrAvailability>> GetByDrId(Guid drID)
         {
             try
             {
+                DateTime today = DateTime.Today; 
+
                 var res = await _businessDbContext.DrAvailabilities
-                    .Where(a => a.DrId==drID &&  a.IsAvailable && !a.Is_deleted)
+                    .Where(a => a.DrId==drID &&  a.IsAvailable && !a.Is_deleted && a.AppointmentDate>=today)
                     .ToListAsync();
                 return res;
             }
@@ -59,5 +64,39 @@ namespace BusinessService.Infrastructure.Repositories
                 throw new Exception(ex.InnerException?.Message ?? ex.Message, ex);
             }
         }
+
+        public async Task<List<DrAvailability>> GetByDrProfileById(Guid drID, int days)
+        {
+            try
+            {
+            
+                var latestSlotDate = await _businessDbContext.DrAvailabilities
+                    .Where(a => a.DrId == drID && a.IsAvailable && !a.Is_deleted)
+                    .MaxAsync(a => (DateTime?)a.AppointmentDate); 
+
+                if (latestSlotDate == null)
+                {
+                    return new List<DrAvailability>(); 
+                }
+
+                DateTime startDate = latestSlotDate.Value.AddDays(-(days - 1)); 
+
+              
+                var res = await _businessDbContext.DrAvailabilities
+                    .Where(a => a.DrId == drID &&
+                                a.IsAvailable &&
+                                !a.Is_deleted &&
+                                a.AppointmentDate >= startDate &&
+                                a.AppointmentDate <= latestSlotDate)
+                    .ToListAsync();
+
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.Message, ex);
+            }
+        }
+
     }
 }

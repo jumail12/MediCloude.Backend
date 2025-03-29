@@ -10,7 +10,8 @@ namespace BusinessService.Aplication.Interfaces.IRepos
     public interface IDrAvailabilityRepo
     {
         Task<bool> Add(DrAvailability drAvailability);
-        Task<bool> isExists(Guid drid,Day day,TimeSpan time);
+        Task<bool> isExists(Guid drid,DateTime day,TimeSpan time);
         Task<List<DrAvailability>> GetByDrId(Guid drID);
+        Task<List<DrAvailability>> GetByDrProfileById(Guid drID,int days);
     }
 }

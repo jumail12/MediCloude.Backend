@@ -31,7 +31,7 @@ namespace BusinessService.Aplication.Quries.Doctor.Handler
                 }
 
                 var doctor = RabbitMqRes.Message;
-                var specialization = await _specRepo.GetSplByIdAsync(doctor.Specialization_id);
+                var specialization = await _specRepo.GetSplByIdAsync((Guid)doctor.Specialization_id);
 
                 var res = new DrByIdResDto()
                 {
@@ -45,6 +45,7 @@ namespace BusinessService.Aplication.Quries.Doctor.Handler
                     Profile = doctor.Profile,
                     Gender = doctor.Gender.ToString(),
                     Field_experience = doctor.Field_experience,
+                    Drfee = doctor.Drfee,
                 };
 
                 return res;

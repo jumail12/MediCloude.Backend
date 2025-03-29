@@ -73,7 +73,8 @@ namespace BusinessService.Infrastructure.Configurations_
 
                 //request config with queue
                 config.AddRequestClient<DrByIdReq>(new Uri("queue:dr-queue"));   //get dr by id
-                config.AddRequestClient<DrProfileUpdationReq>(new Uri("queue:dr-proupdate-queue")); 
+                config.AddRequestClient<DrProfileUpdationReq>(new Uri("queue:dr-proupdate-queue"));
+                config.AddRequestClient<GetAllDrsReq>(new Uri("queue:get-all-drs"));
             });
         }
     }

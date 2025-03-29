@@ -25,6 +25,7 @@ namespace BusinessService.Aplication.Common.DTOs.Doctor
         public string? Profile { get; set; }
 
         public string? Gender { get; set; }
+        public decimal? Drfee { get; set; } = 500;
 
         public double? Field_experience { get; set; }
     }

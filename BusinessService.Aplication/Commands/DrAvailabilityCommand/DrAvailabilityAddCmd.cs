@@ -13,8 +13,9 @@ namespace BusinessService.Aplication.Commands.DrAvailabilityCommand
     public record DrAvailabilityAddCmd() : IRequest<string>
     {
 
-        [EnumDataType(typeof(Day), ErrorMessage = "Invalid day selection.")]
-        public Day? AppointmentDay { get; set; }
+        [Required(ErrorMessage = "Appointment date is required.")]
+        [DataType(DataType.Date, ErrorMessage = "Invalid date format.")]
+        public DateTime? AppointmentDate { get; set; }  
 
         [Required(ErrorMessage = "Appointment time is required.")]
         [RegularExpression(@"^(0[1-9]|1[0-2]):[0-5][0-9] (AM|PM)$", ErrorMessage = "Invalid time format. Use 'hh:mm AM/PM'")]

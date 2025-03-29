@@ -4,24 +4,27 @@ using Contarcts.Requests.Doctor;
 using Contarcts.Responses.Doctor;
 using MassTransit;
 using MediatR;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
-
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BusinessService.Aplication.Quries.DrAvailability.Handler
 {
-    public class DrAvailabilityByIdQueryHandler : IRequestHandler<DrAvailabilityByIdQuery, List<DrAvailabilityByIdResDto>>
+    public class DrProfileGetAllAvailabilityByIdQueryHandler : IRequestHandler<DrProfileGetAllAvailabilityByIdQuery, List<DrAvailabilityByIdResDto>>
     {
         private readonly IDrAvailabilityRepo _repo;
         private readonly IRequestClient<DrByIdReq> _requestClient;
 
-        public DrAvailabilityByIdQueryHandler(IDrAvailabilityRepo repo, IRequestClient<DrByIdReq> requestClient)
+        public DrProfileGetAllAvailabilityByIdQueryHandler(IDrAvailabilityRepo repo, IRequestClient<DrByIdReq> requestClient)
         {
             _requestClient = requestClient;
             _repo = repo;
         }
-
-        public async Task<List<DrAvailabilityByIdResDto>> Handle(DrAvailabilityByIdQuery request, CancellationToken cancellationToken)
+        public async Task<List<DrAvailabilityByIdResDto>> Handle(DrProfileGetAllAvailabilityByIdQuery request, CancellationToken cancellationToken)
         {
             try
             {
@@ -34,27 +37,23 @@ namespace BusinessService.Aplication.Quries.DrAvailability.Handler
 
                 var doctor = RabbitMqRes.Message;
 
-                var slots = await _repo.GetByDrId(doctor.Id);
-
-                var currentTime = DateTime.Now.TimeOfDay; 
-                var today = DateTime.Today; 
-
+                var slots= await _repo.GetByDrProfileById(request.drid, request.lastdaysSlots);
 
                 var res = slots
-                    .Where(a => a.AppointmentDate > today || (a.AppointmentDate == today && a.AppointmentTime >= currentTime))
-                    .GroupBy(a => a.AppointmentDate) 
-                    .Select(grp => new DrAvailabilityByIdResDto
-                    {
-                        AppointmentDate = grp.Key,
-                        AppointmentTimes = grp.Select(b => new DrAvailabiliyTimeSlotDto
-                        {
+                        .GroupBy(a => a.AppointmentDate)
+                        .Select(grp => new DrAvailabilityByIdResDto
+                       {
+                          AppointmentDate = grp.Key,
+                          AppointmentTimes = grp.Select(b => new DrAvailabiliyTimeSlotDto
+                          {
                             Id = b.Id,
-                            AppointmentTime = DateTime.Today.Add(b.AppointmentTime).ToString("hh:mm tt", CultureInfo.InvariantCulture), 
+                            AppointmentTime = DateTime.Today.Add(b.AppointmentTime).ToString("hh:mm tt", CultureInfo.InvariantCulture),
                             IsAvailable = b.IsAvailable,
-                        }).ToList()
-                    }).ToList();
+                          }).ToList()
+                       }).ToList();
 
                 return res;
+
             }
             catch (ValidationException)
             {

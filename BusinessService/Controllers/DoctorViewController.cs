@@ -21,7 +21,25 @@ namespace BusinessService.Controllers
             _sender = sender;
         }
 
-        
+        [HttpGet("all")]
+        public async Task<IActionResult> GetALl(int pageNumber, int pageSize)
+        {
+            try
+            {
+                var res = await _sender.Send(new GetAllDrsQuery(pageNumber,pageSize));
+                return Ok(new ApiResponse<GetAllDrsPageResDto>(200, "success", res, null));
+            }
+            catch (ValidationException ex)
+            {
+                return BadRequest(new ApiResponse<string>(400, "Validation failed", null, ex.Message));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ApiResponse<string>(500, "An Internal Error occurred", null, ex.Message));
+            }
+        }
+
+        [Authorize]
         [HttpGet("id")]
         public async Task<IActionResult> GetDrById(Guid Id)
         {
