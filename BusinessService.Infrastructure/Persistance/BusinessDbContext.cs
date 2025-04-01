@@ -11,5 +11,6 @@ namespace BusinessService.Infrastructure.Persistance
         public DbSet<Specialization_doctor> Specializations { get; set; }
         public DbSet<DrAvailability> DrAvailabilities { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<Payment> Payments { get; set; }
     }
 }

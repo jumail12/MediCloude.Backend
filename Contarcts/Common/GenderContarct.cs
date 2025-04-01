@@ -14,5 +14,12 @@ namespace Contarcts.Common
             Female,
             Other
         }
+
+        public enum GenderP
+        {
+            Male,
+            Female,
+            Other
+        }
     }
 }

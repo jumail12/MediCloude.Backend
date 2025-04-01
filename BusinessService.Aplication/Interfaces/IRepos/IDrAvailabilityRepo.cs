@@ -13,5 +13,6 @@ namespace BusinessService.Aplication.Interfaces.IRepos
         Task<bool> isExists(Guid drid,DateTime day,TimeSpan time);
         Task<List<DrAvailability>> GetByDrId(Guid drID);
         Task<List<DrAvailability>> GetByDrProfileById(Guid drID,int days);
+        Task<DrAvailability> GetBySlotId(Guid slotID);
     }
 }

@@ -5,6 +5,7 @@ using BusinessService.Infrastructure.Persistance;
 using BusinessService.Infrastructure.Repositories;
 using BusinessService.Infrastructure.Services;
 using Contarcts.Requests.Doctor;
+using Contarcts.Requests.Patient;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,6 +30,9 @@ namespace BusinessService.Infrastructure.Configurations_
         {
                 services.AddScoped<ISpecializationRepo,SpecializationRepo>();
                 services.AddScoped<IDrAvailabilityRepo,DrAvailabilityRepo>();
+                services.AddScoped<IPaymentRepo,PaymentRepo>();
+                services.AddScoped<IAppoinmentRepo,AppoinmentRepo>();
+            services.AddScoped<IPaymentAppoinmentRepo, PaymentAppoinmentRepo>();
         }
 
         public static void ServiceConfiguration(this IServiceCollection services)
@@ -75,6 +79,7 @@ namespace BusinessService.Infrastructure.Configurations_
                 config.AddRequestClient<DrByIdReq>(new Uri("queue:dr-queue"));   //get dr by id
                 config.AddRequestClient<DrProfileUpdationReq>(new Uri("queue:dr-proupdate-queue"));
                 config.AddRequestClient<GetAllDrsReq>(new Uri("queue:get-all-drs"));
+                config.AddRequestClient<PatientByIdRequest>(new Uri("queue:patient-byid-queue"));
             });
         }
     }

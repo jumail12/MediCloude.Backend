@@ -1,6 +1,7 @@
 ﻿using AuthService.Application.Interfaces.IRepos;
 using AuthService.Application.Interfaces.IServices;
 using AuthService.Infrastructure.Consumers.Doctor;
+using AuthService.Infrastructure.Consumers.Patient;
 using AuthService.Infrastructure.Persistance;
 using AuthService.Infrastructure.Repositories;
 using AuthService.Infrastructure.Services;
@@ -50,9 +51,13 @@ namespace AuthService.Infrastructure.Configurations_
           
             services.AddMassTransit(config =>
             {
+                //dr
                 config.AddConsumer<DrByIdConsumer>();  //register consumer for drby id
                 config.AddConsumer<DrProfileUpdationConsumer>();
                 config.AddConsumer<GetAllDrsConsumer>();
+
+                //patient
+                config.AddConsumer<PatientByIdConsumer>();
 
                 config.UsingRabbitMq((ctx, cfg) =>
                 {
@@ -73,6 +78,11 @@ namespace AuthService.Infrastructure.Configurations_
                     cfg.ReceiveEndpoint("get-all-drs", e =>
                     {
                         e.ConfigureConsumer<GetAllDrsConsumer>(ctx);  
+                    });
+
+                    cfg.ReceiveEndpoint("patient-byid-queue", e =>
+                    {
+                        e.ConfigureConsumer<PatientByIdConsumer>(ctx);
                     });
                 });
                 config.AddRequestClient<SpecializationExistsReq>(new Uri("queue:spl-exists-queue"));   //spelization esits request

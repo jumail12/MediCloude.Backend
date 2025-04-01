@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Contarcts.Common.GenderContarct;
 
 namespace AuthService.Domain.Entities
 {
@@ -36,11 +37,6 @@ namespace AuthService.Domain.Entities
         public GenderP? Gender { get; set; }
     }
 
-    public enum GenderP
-    {
-        Male,
-        Female,
-        Other
-    }
+   
 }
 

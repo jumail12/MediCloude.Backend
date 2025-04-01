@@ -79,6 +79,17 @@ namespace BusinessService.Infrastructure.Repositories
                     return new List<DrAvailability>(); 
                 }
 
+                if (days == 0)
+                {
+                    var all = await _businessDbContext.DrAvailabilities
+                         .Where(a => a.DrId == drID &&
+                         a.IsAvailable &&
+                         !a.Is_deleted )
+             .ToListAsync();
+
+                    return all;
+                }
+
                 DateTime startDate = latestSlotDate.Value.AddDays(-(days - 1)); 
 
               
@@ -90,6 +101,19 @@ namespace BusinessService.Infrastructure.Repositories
                                 a.AppointmentDate <= latestSlotDate)
                     .ToListAsync();
 
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.Message, ex);
+            }
+        }
+
+        public async Task<DrAvailability> GetBySlotId(Guid slotID)
+        {
+            try
+            {
+                var res= await _businessDbContext.DrAvailabilities.FirstOrDefaultAsync(a=>a.Id == slotID && a.IsAvailable && !a.Is_deleted);
                 return res;
             }
             catch (Exception ex)
