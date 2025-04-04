@@ -71,7 +71,7 @@ namespace BusinessService.Infrastructure.Repositories
             {
             
                 var latestSlotDate = await _businessDbContext.DrAvailabilities
-                    .Where(a => a.DrId == drID && a.IsAvailable && !a.Is_deleted)
+                    .Where(a => a.DrId == drID  && !a.Is_deleted)
                     .MaxAsync(a => (DateTime?)a.AppointmentDate); 
 
                 if (latestSlotDate == null)
@@ -83,7 +83,7 @@ namespace BusinessService.Infrastructure.Repositories
                 {
                     var all = await _businessDbContext.DrAvailabilities
                          .Where(a => a.DrId == drID &&
-                         a.IsAvailable &&
+                        
                          !a.Is_deleted )
              .ToListAsync();
 
@@ -95,7 +95,7 @@ namespace BusinessService.Infrastructure.Repositories
               
                 var res = await _businessDbContext.DrAvailabilities
                     .Where(a => a.DrId == drID &&
-                                a.IsAvailable &&
+                                
                                 !a.Is_deleted &&
                                 a.AppointmentDate >= startDate &&
                                 a.AppointmentDate <= latestSlotDate)
@@ -114,6 +114,47 @@ namespace BusinessService.Infrastructure.Repositories
             try
             {
                 var res= await _businessDbContext.DrAvailabilities.FirstOrDefaultAsync(a=>a.Id == slotID && a.IsAvailable && !a.Is_deleted);
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.Message, ex);
+            }
+        }
+
+        public async Task<List<DrAvailability>> GetAllSlots()
+        {
+            try
+            {
+                var res = await _businessDbContext.DrAvailabilities.Where(a=>!a.IsAvailable &&  !a.Is_deleted).ToListAsync();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.Message, ex);
+            }
+        }
+
+        public async Task<DrAvailability> GetById(Guid id)
+        {
+            try
+            {
+                var res = await _businessDbContext.DrAvailabilities
+                    .Where(b=>!b.Is_deleted)
+                    .FirstOrDefaultAsync(a => a.Id == id);
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.Message, ex);
+            }
+        }
+
+        public async Task<DrAvailability> GetByForAppinment(Guid id)
+        {
+            try
+            {
+                var res = await _businessDbContext.DrAvailabilities.FirstOrDefaultAsync(a=>a.Id==id && !a.IsAvailable && !a.Is_deleted);
                 return res;
             }
             catch (Exception ex)

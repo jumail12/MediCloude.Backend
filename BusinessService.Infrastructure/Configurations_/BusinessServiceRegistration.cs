@@ -38,6 +38,12 @@ namespace BusinessService.Infrastructure.Configurations_
         public static void ServiceConfiguration(this IServiceCollection services)
         {
             services.AddScoped<ICloudinaryService, CloudinaryService>();
+            services.AddScoped<INotificationService, NotificationService>();
+            services.AddSignalR(options =>
+            {
+                options.KeepAliveInterval = TimeSpan.FromSeconds(15);
+                options.ClientTimeoutInterval = TimeSpan.FromSeconds(30);
+            });
         }
 
      
@@ -80,6 +86,7 @@ namespace BusinessService.Infrastructure.Configurations_
                 config.AddRequestClient<DrProfileUpdationReq>(new Uri("queue:dr-proupdate-queue"));
                 config.AddRequestClient<GetAllDrsReq>(new Uri("queue:get-all-drs"));
                 config.AddRequestClient<PatientByIdRequest>(new Uri("queue:patient-byid-queue"));
+                config.AddRequestClient<GetAllPatientReq>(new Uri("queue:get-all-patients"));
             });
         }
     }

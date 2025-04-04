@@ -14,5 +14,8 @@ namespace BusinessService.Aplication.Interfaces.IRepos
         Task<List<DrAvailability>> GetByDrId(Guid drID);
         Task<List<DrAvailability>> GetByDrProfileById(Guid drID,int days);
         Task<DrAvailability> GetBySlotId(Guid slotID);
+        Task<List<DrAvailability>> GetAllSlots();
+        Task<DrAvailability> GetByForAppinment(Guid id);
+        Task<DrAvailability> GetById(Guid id);
     }
 }

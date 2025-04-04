@@ -1,6 +1,8 @@
 
 using BusinessService.Aplication.Commands.SpecializationDrCommand;
 using BusinessService.Infrastructure.Configurations_;
+using BusinessService.Infrastructure.Notifications;
+using BusinessService.Infrastructure.VideoCallSetup;
 using BusinessService.Middlewares;
 using DotNetEnv;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -15,8 +17,6 @@ namespace BusinessService
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-       
 
             builder.Services.AddControllers();
         
@@ -123,7 +123,8 @@ namespace BusinessService
 
             app.UseMiddleware<BusinessServiceUserIdMiddlware>();
             app.MapControllers();
-
+            app.MapHub<NotHub>("/nothub");
+            app.MapHub<VideoHub>("videohub");
             app.Run();
         }
     }

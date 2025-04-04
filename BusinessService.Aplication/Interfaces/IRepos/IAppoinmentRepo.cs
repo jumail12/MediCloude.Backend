@@ -10,5 +10,8 @@ namespace BusinessService.Aplication.Interfaces.IRepos
     public interface IAppoinmentRepo
     {
         Task<Guid> AddAppoinment(Appointment appointment);
+        Task<List<Appointment>> GetAppoinmentListByDrId(Guid drid);
+        Task<Appointment> GetBy_APId(Guid id);
+        Task<List<Appointment>> GetByPatientID(Guid patientID);
     }
 }

@@ -55,6 +55,7 @@ namespace AuthService.Infrastructure.Configurations_
                 config.AddConsumer<DrByIdConsumer>();  //register consumer for drby id
                 config.AddConsumer<DrProfileUpdationConsumer>();
                 config.AddConsumer<GetAllDrsConsumer>();
+                config.AddConsumer<GetAllPatientConsumer>();
 
                 //patient
                 config.AddConsumer<PatientByIdConsumer>();
@@ -83,6 +84,11 @@ namespace AuthService.Infrastructure.Configurations_
                     cfg.ReceiveEndpoint("patient-byid-queue", e =>
                     {
                         e.ConfigureConsumer<PatientByIdConsumer>(ctx);
+                    });
+
+                    cfg.ReceiveEndpoint("get-all-patients", e =>
+                    {
+                        e.ConfigureConsumer<GetAllPatientConsumer>(ctx);
                     });
                 });
                 config.AddRequestClient<SpecializationExistsReq>(new Uri("queue:spl-exists-queue"));   //spelization esits request

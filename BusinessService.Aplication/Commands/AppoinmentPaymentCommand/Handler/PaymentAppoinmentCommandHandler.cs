@@ -7,7 +7,10 @@ using MassTransit;
 using MediatR;
 using Razorpay.Api;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.EntityFrameworkCore.Storage; 
+using Microsoft.EntityFrameworkCore.Storage;
+using BusinessService.Aplication.Interfaces.IServices;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
+using Contarcts.Common.DTOs;
 
 namespace BusinessService.Aplication.Commands.AppoinmentPaymentCommand.Handler
 {
@@ -16,12 +19,14 @@ namespace BusinessService.Aplication.Commands.AppoinmentPaymentCommand.Handler
         private readonly IPaymentAppoinmentRepo _repo;
         private readonly IRequestClient<PatientByIdRequest> _requestClient;
         private readonly IDrAvailabilityRepo _rAvailabilityRepo;
+        private readonly INotificationService _notificationService;
 
-        public PaymentAppoinmentCommandHandler(IRequestClient<PatientByIdRequest> requestClient, IDrAvailabilityRepo rAvailabilityRepo, IPaymentAppoinmentRepo repo)
+        public PaymentAppoinmentCommandHandler(IRequestClient<PatientByIdRequest> requestClient, IDrAvailabilityRepo rAvailabilityRepo, IPaymentAppoinmentRepo repo,INotificationService notificationService )
         {
             _requestClient = requestClient;
             _rAvailabilityRepo = rAvailabilityRepo;
             _repo = repo;
+            _notificationService = notificationService;
         }
 
         public async Task<string> Handle(PaymentAppoinmentCommand request, CancellationToken cancellationToken)
@@ -78,9 +83,34 @@ namespace BusinessService.Aplication.Commands.AppoinmentPaymentCommand.Handler
                     Updated_on = DateTime.UtcNow,
                 };
 
-               
+            
+
                 await _repo.PaymentAppoinmentGateway(newAppoinment, paymentData,request.RazorPaymentCredential);
 
+                var notEntity = new Domain.Entities.Notification
+                {
+                    Title = "New Appointment Notification",
+                    Message = $"{patient.Patient_name} has scheduled an appointment with you.Please review your schedule for details.",
+                    Sender_id = patient.Patient_id,
+                    Sender_Name = patient.Patient_name,
+                    Recipient_id = slot.DrId,
+                    Recipient_type = "Doctor",
+                    Created_by = patient.Patient_name,
+                    Updated_by = patient.Patient_name,
+                    Created_on = DateTime.UtcNow,
+                    Updated_on = DateTime.UtcNow,
+                };
+
+                var resNot = new NotificationResDto
+                {
+                    Sender_Name = patient.Patient_name,
+                    Recipient_id = slot.DrId,
+                    Message = notEntity.Message,
+                    Title = notEntity.Title,
+                    Sender_Profile = notEntity.Sender_Profile,
+                };
+
+               await _notificationService.AppoinmentCreatedNotifyDr(notEntity, resNot);
 
                 return "Your appoinment is booked successfully..!";
 

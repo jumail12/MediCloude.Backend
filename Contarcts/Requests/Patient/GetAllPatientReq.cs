@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Contarcts.Requests.Doctor
+namespace Contarcts.Requests.Patient
 {
-    public record GetAllDrsReq();
+    public record GetAllPatientReq();
 }
