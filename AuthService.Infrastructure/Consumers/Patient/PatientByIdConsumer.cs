@@ -39,6 +39,7 @@ namespace AuthService.Infrastructure.Consumers.Patient
                     Dob=patient.Dob,
                     Email=patient.Email,
                     Gender=patient.Gender,
+                    IsBlocked=patient.Is_blocked,
                 };
 
                 await context.RespondAsync(res);

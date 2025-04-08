@@ -25,5 +25,6 @@ namespace Contarcts.Responses.Doctor
         public decimal? Drfee { get; set; } = 500;
 
         public double? Field_experience { get; set; }
+        public bool IsBlocked { get; set; }
     }
 }

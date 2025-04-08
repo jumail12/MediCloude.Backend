@@ -1,6 +1,6 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
-using static Contarcts.Common.GenderContarct;
+using static Contarcts.Common.CommonContarct;
 
 
 namespace AuthService.Domain.Entities

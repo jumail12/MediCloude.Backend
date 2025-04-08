@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using static Contarcts.Common.CommonContarct;
 
 namespace BusinessService.Domain.Entities
 {
@@ -37,17 +38,5 @@ namespace BusinessService.Domain.Entities
         public Status PaymentStatus { get; set; }
     }
 
-    public enum Status
-    {
-        Pending,
-        Success,
-        Failed
-    }
-
-    public enum PaymentWay
-    {
-        Credit_Card,
-        UPI,
-        Bank_Transfer
-    }
+ 
 }

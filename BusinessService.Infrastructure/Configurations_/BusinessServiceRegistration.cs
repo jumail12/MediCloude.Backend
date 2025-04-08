@@ -33,6 +33,7 @@ namespace BusinessService.Infrastructure.Configurations_
                 services.AddScoped<IPaymentRepo,PaymentRepo>();
                 services.AddScoped<IAppoinmentRepo,AppoinmentRepo>();
             services.AddScoped<IPaymentAppoinmentRepo, PaymentAppoinmentRepo>();
+            services.AddScoped<IPrescriptionRepo,PrescriptionRepo>();
         }
 
         public static void ServiceConfiguration(this IServiceCollection services)
@@ -44,9 +45,18 @@ namespace BusinessService.Infrastructure.Configurations_
                 options.KeepAliveInterval = TimeSpan.FromSeconds(15);
                 options.ClientTimeoutInterval = TimeSpan.FromSeconds(30);
             });
+            services.AddScoped<IGeminiService, GeminiService>();
+
+            var _apiKey = Environment.GetEnvironmentVariable("Gemini_APiKey");
+
+            services.AddHttpClient("GeminiClient", client =>
+            {
+                client.BaseAddress = new Uri($"https://generativelanguage.googleapis.com/");
+            });
+
         }
 
-     
+
 
         //rabbitmq
         public static void RabbitMqConfig(this IServiceCollection services)
@@ -87,6 +97,8 @@ namespace BusinessService.Infrastructure.Configurations_
                 config.AddRequestClient<GetAllDrsReq>(new Uri("queue:get-all-drs"));
                 config.AddRequestClient<PatientByIdRequest>(new Uri("queue:patient-byid-queue"));
                 config.AddRequestClient<GetAllPatientReq>(new Uri("queue:get-all-patients"));
+                config.AddRequestClient<PatientBlockUnblockReq>(new Uri("queue:patient-block-unblock"));
+                config.AddRequestClient<DrBlockUnBlockReq>(new Uri("queue:dr-block-unblock"));
             });
         }
     }

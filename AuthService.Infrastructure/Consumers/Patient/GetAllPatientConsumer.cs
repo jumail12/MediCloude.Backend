@@ -23,7 +23,7 @@ namespace AuthService.Infrastructure.Consumers.Patient
         {
             try
             {
-                var patients= await _authDbContext.Patients.Where(a=>!a.Is_blocked).ToListAsync();
+                var patients= await _authDbContext.Patients.ToListAsync();
 
                 var res= patients.Select(a=> new PatientByIdResponse
                 {
@@ -34,6 +34,7 @@ namespace AuthService.Infrastructure.Consumers.Patient
                     Dob=a.Dob,
                     Email=a.Email,
                     Gender=a.Gender,
+                    IsBlocked=a.Is_blocked,
                 }).ToList();
 
                 await context.RespondAsync(new GetAllPatientResponse { patients = res });

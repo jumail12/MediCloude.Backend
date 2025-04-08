@@ -10,5 +10,8 @@ namespace BusinessService.Aplication.Interfaces.IRepos
     public interface IPaymentRepo
     {
         Task<bool> AddPaymentDetails(Payment payment);
+        Task<List<Payment>> GetAllPaymentDetailsByDrId(Guid drid);
+        Task<List<Payment>> GetAllPaymentsByPatientId(Guid patientId);
+        Task<List<Payment>> GetALlPayments();
     }
 }

@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 using BusinessService.Aplication.Interfaces.IServices;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Contarcts.Common.DTOs;
+using static Contarcts.Common.CommonContarct;
 
 namespace BusinessService.Aplication.Commands.AppoinmentPaymentCommand.Handler
 {

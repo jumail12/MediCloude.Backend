@@ -97,7 +97,7 @@ namespace BusinessService.Infrastructure.Notifications
         {
             if (string.IsNullOrEmpty(userId))
             {
-                _logger.LogWarning("SendNotificationToDoctor: drId is null or empty.");
+                _logger.LogWarning("SendNotificationToPatient: userId is null or empty.");
                 return;
             }
 

@@ -45,6 +45,19 @@ namespace BusinessService.Infrastructure.Repositories
             }
         }
 
+        public async Task<List<Appointment>> GetAppoinmentByDrId(Guid drid)
+        {
+            try
+            {
+                var res = await _businessDbContext.Appointments.Where(a => a.DrId == drid &&  !a.Is_deleted).ToListAsync();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.Message, ex);
+            }
+        }
+
         public async Task<Appointment> GetBy_APId(Guid id)
         {
             try
@@ -63,6 +76,58 @@ namespace BusinessService.Infrastructure.Repositories
             try
             {
                 var res = await _businessDbContext.Appointments.Where(a=>!a.Is_deleted && a.PatientId == patientID && a.Status.ToString()== "Confirmed").ToListAsync();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.Message, ex);
+            }
+        }
+
+        public async Task<List<Appointment>> GetByPatientID_Prescription(Guid patientID)
+        {
+            try
+            {
+                var res= await _businessDbContext.Appointments.Where(a=>a.PatientId == patientID && a.Status.ToString()== "Success").ToListAsync();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.Message, ex);
+            }
+        }
+
+        public async Task<bool> SaveAsync()
+        {
+            try
+            {
+                await _businessDbContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.Message, ex);
+            }
+        }
+
+        public async Task<List<Appointment>> GetAppointments_Patient(Guid pId)
+        {
+            try
+            {
+                var res =await _businessDbContext.Appointments.Where(a=>a.PatientId==pId && !a.Is_deleted).ToListAsync();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.Message, ex);
+            }
+        }
+
+        public async Task<List<Appointment>> GetAll()
+        {
+            try
+            {
+                var res= await _businessDbContext.Appointments.ToListAsync();
                 return res;
             }
             catch (Exception ex)

@@ -15,5 +15,6 @@ namespace BusinessService.Aplication.Common.DTOs.Appoinment
         public string? Patient_name { get; set; }
         public string Email { get; set; }
         public Guid? RoomId { get; set; }
+        public string? AppoinmentStatus { get; set; }
     }
 }

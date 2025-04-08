@@ -56,6 +56,8 @@ namespace AuthService.Infrastructure.Configurations_
                 config.AddConsumer<DrProfileUpdationConsumer>();
                 config.AddConsumer<GetAllDrsConsumer>();
                 config.AddConsumer<GetAllPatientConsumer>();
+                config.AddConsumer<PatientBlockUnblockConsumer>();
+                config.AddConsumer<DrBlockUnblockConsumer>();
 
                 //patient
                 config.AddConsumer<PatientByIdConsumer>();
@@ -90,6 +92,16 @@ namespace AuthService.Infrastructure.Configurations_
                     {
                         e.ConfigureConsumer<GetAllPatientConsumer>(ctx);
                     });
+
+                    cfg.ReceiveEndpoint("patient-block-unblock", e =>
+                    {
+                        e.ConfigureConsumer<PatientBlockUnblockConsumer>(ctx);
+                    });
+                    cfg.ReceiveEndpoint("dr-block-unblock", e =>
+                    {
+                        e.ConfigureConsumer<DrBlockUnblockConsumer>(ctx);
+                    });
+
                 });
                 config.AddRequestClient<SpecializationExistsReq>(new Uri("queue:spl-exists-queue"));   //spelization esits request
                 config.AddRequestClient<GetAllSpecializationReq>(new Uri("queue:spl-getall-queue"));    //spl get all request

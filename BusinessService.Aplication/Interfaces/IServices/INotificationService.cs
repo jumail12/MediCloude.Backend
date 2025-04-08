@@ -14,7 +14,7 @@ namespace BusinessService.Aplication.Interfaces.IServices
         Task<List<Notification>> GetNotificationBYId(Guid id,string recip_type);
         Task<Notification> GetById(Guid id, Guid authid,string recip_type);
         Task<bool> SaveAsync();
-
         Task<bool> AppoinmetStartPatientAlert(Notification notification,NotificationResDto notificationResDto);
+        Task<bool> PrescriptionCreatedNotifyPatient(Notification notification,NotificationResDto notificationResDto);
     }
 }

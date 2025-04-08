@@ -36,7 +36,7 @@ namespace AuthService.Infrastructure.Consumers.Doctor
                     Drfee=a.Drfee,
                     Field_experience=a.Field_experience,
                     Gender=a.Gender.ToString(),
-                      
+                      IsBlocked=a.Is_blocked,
                 }).ToList();
 
                 await context.RespondAsync(new GetAllDrsResponse() { doctors=res});

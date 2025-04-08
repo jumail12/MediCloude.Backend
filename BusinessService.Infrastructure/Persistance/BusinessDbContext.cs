@@ -12,6 +12,7 @@ namespace BusinessService.Infrastructure.Persistance
         public DbSet<DrAvailability> DrAvailabilities { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Payment> Payments { get; set; }
-        public DbSet<Notification> Notifications { get; set; }  
+        public DbSet<Notification> Notifications { get; set; }
+        public DbSet<Prescription> Prescriptions { get; set; }
     }
 }

@@ -1,5 +1,8 @@
 ﻿using BusinessService.ApiResponses;
 using BusinessService.Aplication.Commands.AppoinmentPaymentCommand;
+using BusinessService.Aplication.Common.DTOs.Payment;
+using BusinessService.Aplication.Quries.Payment;
+using CloudinaryDotNet.Actions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -57,5 +60,24 @@ namespace BusinessService.Controllers
             }
         }
 
+        [Authorize(Roles="Doctor")]
+        [HttpGet("dr-dashboard")]
+        public async Task<IActionResult> DrDashBoard(int pageNumber, int pageSize)
+        {
+            try
+            {
+                var userId = Convert.ToString(HttpContext.Items["UserId"]);
+                var res = await _sender.Send(new DrPaymentDashboardQuery(Guid.Parse(userId),pageNumber,pageSize));
+                return Ok(new ApiResponse<DrPaymentDashboardResDto>(200, "success", res, null));
+            }
+            catch (ValidationException ex)
+            {
+                return BadRequest(new ApiResponse<string>(400, "Validation failed", null, ex.Message));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ApiResponse<string>(500, "An Internal Error occurred", null, ex.Message));
+            }
+        }
     }
 }

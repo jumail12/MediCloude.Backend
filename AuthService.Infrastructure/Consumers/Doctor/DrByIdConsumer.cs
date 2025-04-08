@@ -37,6 +37,7 @@ namespace AuthService.Infrastructure.Consumers.Doctor
                     Field_experience=doctor.Field_experience,
                     Gender=doctor.Gender.ToString(),
                     Drfee=doctor.Drfee,
+                    IsBlocked=doctor.Is_blocked,
                 };
 
                 await context.RespondAsync(res);

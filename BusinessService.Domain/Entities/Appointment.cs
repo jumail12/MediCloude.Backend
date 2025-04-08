@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using static Contarcts.Common.CommonContarct;
 
 namespace BusinessService.Domain.Entities
 {
@@ -23,13 +24,7 @@ namespace BusinessService.Domain.Entities
             public Guid? RoomId { get; set; } 
         }
 
-        public enum AppointmentStatus
-        {
-            Pending,
-            Confirmed,
-            Success,
-            Cancelled
-        }
+   
     }
 
 

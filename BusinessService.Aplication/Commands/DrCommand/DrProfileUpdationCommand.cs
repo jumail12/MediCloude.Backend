@@ -12,7 +12,7 @@ namespace BusinessService.Aplication.Commands.DrCommand
     using System;
     using System.ComponentModel.DataAnnotations;
     using Microsoft.AspNetCore.Http;
-    using static Contarcts.Common.GenderContarct;
+    using static Contarcts.Common.CommonContarct;
 
     public record DrProfileUpdationCommand : IRequest<string>
     {

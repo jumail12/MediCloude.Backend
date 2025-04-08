@@ -57,6 +57,23 @@ namespace BusinessService.Infrastructure.Services
             }
         }
 
+        public async Task<bool> PrescriptionCreatedNotifyPatient(Notification notification, NotificationResDto notificationResDto)
+        {
+            try
+            {
+                await _businessDbContext.Notifications.AddAsync(notification);
+                await _businessDbContext.SaveChangesAsync();
+
+                await _hubContext.Clients.Group(notification.Recipient_id.ToString())
+                    .SendAsync("receivenotificationpatient", notificationResDto);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.InnerException?.Message ?? ex.Message, ex);
+            }
+        }
+
         public async Task<List<Notification>> GetNotificationBYId(Guid id, string recip_type)
         {
             try

@@ -53,6 +53,7 @@ namespace BusinessService.Aplication.Quries.Doctor.Handler
                     AppointmentDate=slot.AppointmentDate,
                     AppointmentTime = slot?.AppointmentTime ?? TimeSpan.Zero,
                     RoomId=appoinment.RoomId,
+                    AppoinmentStatus=appoinment.Status.ToString(),
                 };
 
                 return res;
