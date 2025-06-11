@@ -30,7 +30,6 @@ namespace BusinessService.Infrastructure.VideoCallSetup
                 await Groups.RemoveFromGroupAsync(Context.ConnectionId, roomName);
                 await Clients.OthersInGroup(roomName).SendAsync("ForceEndCall");
             }
-
             await base.OnDisconnectedAsync(exception);
         }
 

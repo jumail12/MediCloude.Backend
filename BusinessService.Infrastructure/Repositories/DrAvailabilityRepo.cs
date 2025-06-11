@@ -2,11 +2,7 @@
 using BusinessService.Domain.Entities;
 using BusinessService.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BusinessService.Infrastructure.Repositories
 {
@@ -52,10 +48,10 @@ namespace BusinessService.Infrastructure.Repositories
         {
             try
             {
-                DateTime today = DateTime.Today; 
+                DateTime today = DateTime.Today;
 
                 var res = await _businessDbContext.DrAvailabilities
-                    .Where(a => a.DrId==drID &&  a.IsAvailable && !a.Is_deleted && a.AppointmentDate>=today)
+                    .Where(a => a.DrId == drID && a.IsAvailable && !a.Is_deleted && a.AppointmentDate >= today)
                     .ToListAsync();
                 return res;
             }
@@ -69,33 +65,33 @@ namespace BusinessService.Infrastructure.Repositories
         {
             try
             {
-            
+
                 var latestSlotDate = await _businessDbContext.DrAvailabilities
-                    .Where(a => a.DrId == drID  && !a.Is_deleted)
-                    .MaxAsync(a => (DateTime?)a.AppointmentDate); 
+                    .Where(a => a.DrId == drID && !a.Is_deleted)
+                    .MaxAsync(a => (DateTime?)a.AppointmentDate);
 
                 if (latestSlotDate == null)
                 {
-                    return new List<DrAvailability>(); 
+                    return new List<DrAvailability>();
                 }
 
                 if (days == 0)
                 {
                     var all = await _businessDbContext.DrAvailabilities
                          .Where(a => a.DrId == drID &&
-                        
-                         !a.Is_deleted )
+
+                         !a.Is_deleted)
              .ToListAsync();
 
                     return all;
                 }
 
-                DateTime startDate = latestSlotDate.Value.AddDays(-(days - 1)); 
+                DateTime startDate = latestSlotDate.Value.AddDays(-(days - 1));
 
-              
+
                 var res = await _businessDbContext.DrAvailabilities
                     .Where(a => a.DrId == drID &&
-                                
+
                                 !a.Is_deleted &&
                                 a.AppointmentDate >= startDate &&
                                 a.AppointmentDate <= latestSlotDate)
@@ -113,7 +109,7 @@ namespace BusinessService.Infrastructure.Repositories
         {
             try
             {
-                var res= await _businessDbContext.DrAvailabilities.FirstOrDefaultAsync(a=>a.Id == slotID && a.IsAvailable && !a.Is_deleted);
+                var res = await _businessDbContext.DrAvailabilities.FirstOrDefaultAsync(a => a.Id == slotID && a.IsAvailable && !a.Is_deleted);
                 return res;
             }
             catch (Exception ex)
@@ -126,7 +122,7 @@ namespace BusinessService.Infrastructure.Repositories
         {
             try
             {
-                var res = await _businessDbContext.DrAvailabilities.Where(a=>!a.IsAvailable &&  !a.Is_deleted).ToListAsync();
+                var res = await _businessDbContext.DrAvailabilities.Where(a => !a.IsAvailable && !a.Is_deleted).ToListAsync();
                 return res;
             }
             catch (Exception ex)
@@ -140,7 +136,7 @@ namespace BusinessService.Infrastructure.Repositories
             try
             {
                 var res = await _businessDbContext.DrAvailabilities
-                    .Where(b=>!b.Is_deleted)
+                    .Where(b => !b.Is_deleted)
                     .FirstOrDefaultAsync(a => a.Id == id);
                 return res;
             }
@@ -154,7 +150,7 @@ namespace BusinessService.Infrastructure.Repositories
         {
             try
             {
-                var res = await _businessDbContext.DrAvailabilities.FirstOrDefaultAsync(a=>a.Id==id && !a.IsAvailable && !a.Is_deleted);
+                var res = await _businessDbContext.DrAvailabilities.FirstOrDefaultAsync(a => a.Id == id && !a.IsAvailable && !a.Is_deleted);
                 return res;
             }
             catch (Exception ex)

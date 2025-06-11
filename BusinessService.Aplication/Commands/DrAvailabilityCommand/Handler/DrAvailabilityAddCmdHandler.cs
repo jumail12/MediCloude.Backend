@@ -65,8 +65,8 @@ namespace BusinessService.Aplication.Commands.DrAvailabilityCommand.Handler
                 var newSlot = new DrAvailability
                 {
                     DrId = doctor.Id,
-                    AppointmentDate = appointmentDate, 
-                    AppointmentTime = parsedTime, 
+                    AppointmentDate = appointmentDate,
+                    AppointmentTime = parsedTime,
                     Created_by = doctor.Doctor_name,
                     Updated_by = doctor.Doctor_name,
                     Created_on = DateTime.UtcNow,

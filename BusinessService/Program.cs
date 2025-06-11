@@ -19,13 +19,11 @@ namespace BusinessService
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllers();
-        
             builder.Services.AddEndpointsApiExplorer();
+
             builder.Services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "MEDICLOUDE BUSINESS API", Version = "v1" });
-
-
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",

@@ -65,7 +65,7 @@ namespace BusinessService.Aplication.Quries.Prescription.Handler
                 }
 
                 var res = AllPrescriptions
-                      .OrderByDescending(n => n.Created_on)
+                     .OrderByDescending(n => n.Created_on)
                     .Select(x => new PatientPrescriptionResDto
                 {
                     Id = x.Id,

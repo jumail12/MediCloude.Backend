@@ -51,15 +51,13 @@ namespace AuthService.Infrastructure.Configurations_
           
             services.AddMassTransit(config =>
             {
-                //dr
-                config.AddConsumer<DrByIdConsumer>();  //register consumer for drby id
+               
+                config.AddConsumer<DrByIdConsumer>();  
                 config.AddConsumer<DrProfileUpdationConsumer>();
                 config.AddConsumer<GetAllDrsConsumer>();
                 config.AddConsumer<GetAllPatientConsumer>();
                 config.AddConsumer<PatientBlockUnblockConsumer>();
                 config.AddConsumer<DrBlockUnblockConsumer>();
-
-                //patient
                 config.AddConsumer<PatientByIdConsumer>();
 
                 config.UsingRabbitMq((ctx, cfg) =>
